@@ -1,0 +1,12 @@
+Metadata for SaveScalars file: results/scalar_data.dat
+Elmer version: 9.0
+Elmer revision: e34089cde
+Elmer compilation date: 2024-10-09
+Solver input file: case.sif
+File started at: 2024/10/10 13:08:54
+ 
+Variables in columns of matrix: 
+   1: boundary int: volume current over bc 1
+   2: boundary int: potential over bc 1
+   3: res: total joule heating
+   4: res: effective resistance

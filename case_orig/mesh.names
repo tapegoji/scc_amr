@@ -1,0 +1,6 @@
+! ----- names for bodies -----
+$ windings = 1
+! ----- names for boundaries -----
+$ pad_1 = 1
+$ pad_2 = 2
+$ windings_outer = 3

@@ -1,0 +1,137 @@
+Header
+  CHECK KEYWORDS "Warn"
+  Mesh DB "." "case"
+  Results Directory "results"
+End
+
+Simulation
+  Max Output Level = 15
+  Coordinate System = Cartesian
+  Coordinate Mapping(3) = 1 2 3
+  Simulation Type = Steady State
+  Steady State Max Iterations = 10
+  Output Intervals = 1
+  !Post File = case.vtu
+  Coordinate Scaling = 0.001
+End
+
+Constants
+  Gravity(4) = 0 0 -1 9.82
+  Permeability of Vacuum = 1.25663706e-06
+  Permittivity of Vacuum = 8.854187817e-12
+  Stefan Boltzmann = 5.670374419e-08
+  Boltzmann Constant = 1.380649e-23
+  Unit Charge = 1.6021766e-19
+End
+
+! scc_solver
+Equation 1
+  Active Solvers(1) = 1   ! StaticCurrentConductionVec, 
+End
+
+
+! StaticCurrentConductionVec
+Solver 1
+  Equation = Static Current Conduction
+  Calculate Joule Heating = True
+  Procedure = "StatCurrentSolveVec" "StatCurrentSolver"
+  Calculate Volume Current = True
+  Variable = Potential
+  Exec Solver = Always
+  Stabilize = True
+  Optimize Bandwidth = True
+  Steady State Convergence Tolerance = 1e-05
+  Nonlinear System Convergence Tolerance = 1e-05
+  Nonlinear System Max Iterations = 20
+  Nonlinear System Newton After Iterations = 3
+  Nonlinear System Newton After Tolerance = 0.001
+  Nonlinear System Relaxation Factor = 1
+  Linear System Solver = Iterative
+  Linear System Iterative Method = BiCGStab
+  Linear System Max Iterations = 500
+  Linear System Convergence Tolerance = 1e-10
+  Linear System Preconditioning = ILU3
+  Linear System Abort Not Converged = False
+  Linear System Residual Output = 10
+  Linear System Precondition Recompute = 1
+  Adaptive Mesh Refinement = True
+  Adaptive Remesh = True
+  Adaptive Error Limit = 0.001
+  Adaptive Mesh Name = RefinedMesh
+  Adaptive Mesh Numbering = False
+  Adaptive Output = Logical False
+  Adaptive Save Mesh = Logical True
+  Adaptive Coarsening = False
+  Adaptive Min H = 0.000001
+  Adaptive Max H = 1
+  Adaptive ReMesh Use Gmsh = Logical True
+  Mesh Command = File "gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh"
+  Mesh Conversion Command = File "ElmerGrid 14 2 case.msh -autoclean"
+End
+
+! ResultOutputSolver
+Solver 2
+  Exec Solver = After Saving
+  Equation = ResultOutput
+  Procedure = "ResultOutputSolve" "ResultOutputSolver"
+  Vtu Part Collection = Logical True
+  Save Geometry Ids = Logical True
+  Save Bulk Only = Logical True
+  Output File Name = case
+  Save Nodal Fields = Logical True
+End
+
+! SaveScalarsSolver
+Solver 3
+  Exec Solver = After All
+  Equation = SaveScalars
+  Procedure = "SaveData" "SaveScalars"
+  FileName = scalar_data.dat
+  Parallel Reduce = Logical True
+  Mask Name 1 = "pad_1_save_scalar"
+  Variable 1 = "Volume Current"
+  Operator 1 = boundary int
+  Variable 2 = "Potential"
+  Operator 2 = boundary int
+End
+
+
+! copper
+Material 1
+  Density = 8960.0
+  Electric Conductivity = 32300000
+  Emissivity = 0.012
+  Heat Capacity = 415.0
+  Heat Conductivity = 401.0
+  Relative Permeability = 1
+  Relative Permittivity = 1
+End
+
+
+! copper
+Body 1
+  Target Bodies(1) = 1
+  Equation = 1  ! scc_solver
+  Material = 1  ! copper
+  Name = "windings"
+End
+
+
+! pad_1
+Boundary Condition 1
+  Target Boundaries(1) = 1
+  Name = "pad_1"
+  Potential = 1
+  pad_1_save_scalar = Logical True
+End
+
+! pad_2
+Boundary Condition 2
+  Target Boundaries(1) = 2
+  Name = "pad_2"
+  Potential = 0.0
+End
+
+
+
+
