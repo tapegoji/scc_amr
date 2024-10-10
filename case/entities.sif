@@ -12,3 +12,7 @@ Boundary Condition 2
   Name = pad_2
 End
 
+Boundary Condition 3
+  Name = windings_outer
+End
+

@@ -1,4 +1,4 @@
-ELMER SOLVER (v 9.0) STARTED AT: 2024/10/10 13:08:45
+ELMER SOLVER (v 9.0) STARTED AT: 2024/10/10 13:19:26
 ParCommInit:  Initialize #PEs:            1
 MAIN: 
 MAIN: =============================================================
@@ -56,9 +56,9 @@ LoadMesh: Loading serial mesh!
 ElmerAsciiMesh: Performing step: 1
 ElmerAsciiMesh: Base mesh name: ./case
 ReadHeaderFile: Reading header info from file: ./case/mesh.header
-InitializeMesh: Number of nodes in mesh: 5147
-InitializeMesh: Number of bulk elements in mesh: 18901
-InitializeMesh: Number of boundary elements in mesh: 240
+InitializeMesh: Number of nodes in mesh: 2141
+InitializeMesh: Number of bulk elements in mesh: 6502
+InitializeMesh: Number of boundary elements in mesh: 3706
 InitializeMesh: Initial number of max element nodes: 4
 ElmerAsciiMesh: Performing step: 2
 ReadNodesFile: Reading nodes from file: ./case/mesh.nodes
@@ -76,21 +76,21 @@ MapBodiesAndBCs: Minimum initial body index: 1
 MapBodiesAndBCs: Maximum initial body index: 1
 MapBodiesAndBCs: Remapping boundaries
 MapBodiesAndBCs: Minimum initial boundary index: 1
-MapBodiesAndBCs: Maximum initial boundary index: 2
+MapBodiesAndBCs: Maximum initial boundary index: 3
 ElmerAsciiMesh: Performing step: 5
 ElmerAsciiMesh: Performing step: 6
 LoadMesh: Loading mesh done
 NonNodalElements: Element dofs max: 4
 LoadMesh: Preparing mesh done
-LoadMesh: Elapsed REAL time:     0.0232 (s)
+LoadMesh: Elapsed REAL time:     0.0104 (s)
 MeshStabParams: Computing stabilization parameters
-MeshStabParams: Elapsed REAL time:     0.0036 (s)
+MeshStabParams: Elapsed REAL time:     0.0017 (s)
 CompleteModelKeywords: Completing keywords for mortars and mechanics!
 MAIN: -------------------------------------
 AddMeshCoordinates: Setting mesh coordinates and time
-VariableAdd: Adding variable > Coordinate 1 < of size 5147
-VariableAdd: Adding variable > Coordinate 2 < of size 5147
-VariableAdd: Adding variable > Coordinate 3 < of size 5147
+VariableAdd: Adding variable > Coordinate 1 < of size 2141
+VariableAdd: Adding variable > Coordinate 2 < of size 2141
+VariableAdd: Adding variable > Coordinate 3 < of size 2141
 AddSolvers: Setting up 3 solvers
 AddSolvers: Setting up solver 1: static current conduction
 AddEquationBasics: Using procedure: StatCurrentSolveVec StatCurrentSolver
@@ -104,37 +104,37 @@ Loading user function library: [StatCurrentSolveVec]...[StatCurrentSolver]
 AddEquationBasics: Treating variable string: potential
 AddEquationBasics: Creating standard variable: potential
 AddEquationBasics: Computing size of permutation vector
-AddEquationBasics: Maximum size of permutation vector is: 5147
+AddEquationBasics: Maximum size of permutation vector is: 2141
 AddEquationBasics: Creating solver matrix topology
 CreateMatrix: Creating initial permutation
-CreateMatrix: Creating inverse of initial order of size: 5147
+CreateMatrix: Creating inverse of initial order of size: 2141
 CreateMatrix: Creating list matrix for equation: static current conduction
 MakeListMatrix: Creating list matrix
 OptimizeBandwidth: ---------------------------------------------------------
 OptimizeBandwidth: Computing matrix structure for: static current conduction
-OptimizeBandwidth: Initial bandwidth for static current conduction: 5113
-OptimizeBandwidth: Optimized bandwidth for static current conduction: 96
+OptimizeBandwidth: Initial bandwidth for static current conduction: 2113
+OptimizeBandwidth: Optimized bandwidth for static current conduction: 45
 OptimizeBandwidth: ---------------------------------------------------------
 CreateMatrix: Initializing list matrix for equation
-CRS_CreateMatrix: Creating CRS Matrix of size: 5147
-CRS_CreateMatrix: Creating CRS Matrix with nofs: 60619
+CRS_CreateMatrix: Creating CRS Matrix of size: 2141
+CRS_CreateMatrix: Creating CRS Matrix with nofs: 23131
 CreateMatrix: Sparse matrix created
-AddEquationBasics: Number of rows in CRS matrix: 5147
+AddEquationBasics: Number of rows in CRS matrix: 2141
 AddEquationBasics: Creating solver variable
-VariableAdd: Adding variable > potential < of size 5147
+VariableAdd: Adding variable > potential < of size 2141
 AddEquationBasics: Creating exported variable: joule heating
 AddEquationBasics: Creating exported variable: joule heating
-VariableAdd: Adding variable > joule heating < of size 5147
+VariableAdd: Adding variable > joule heating < of size 2141
 AddEquationBasics: Succesfully created variable: joule heating
 AddEquationBasics: Creating exported variable: volume current[volume current:3]
 AddEquationBasics: Creating exported variable: volume current[volume current:3]
-VariableAdd: Adding variable > volume current[volume current:3] < of size 15441
+VariableAdd: Adding variable > volume current[volume current:3] < of size 6423
 AddEquationBasics: Succesfully created variable: volume current
-VariableAdd: Adding variable > volume current 1 < of size 5147
+VariableAdd: Adding variable > volume current 1 < of size 2141
 AddEquationBasics: Succesfully created variable: volume current 1
-VariableAdd: Adding variable > volume current 2 < of size 5147
+VariableAdd: Adding variable > volume current 2 < of size 2141
 AddEquationBasics: Succesfully created variable: volume current 2
-VariableAdd: Adding variable > volume current 3 < of size 5147
+VariableAdd: Adding variable > volume current 3 < of size 2141
 AddEquationBasics: Succesfully created variable: volume current 3
 AddSolvers: Setting up solver 2: resultoutput
 AddEquationBasics: Using procedure: ResultOutputSolve ResultOutputSolver
@@ -179,7 +179,7 @@ SolveEquations: Solvers in main iteration loop
 SolveEquations: Performing set of solvers in sequence
 ListTagCount: Counting tags for keyword normalization!
 SetActiveElementsTable: Creating active element table for: static current conduction
-SetActiveElementsTable: Number of active elements found : 18901
+SetActiveElementsTable: Number of active elements found : 6502
 SingleSolver: Attempting to call solver: 1
 SingleSolver: Solver Equation string is: static current conduction
 StatCurrentSolver: ------------------------------------------------
@@ -195,7 +195,7 @@ ListInitElementKeyword: Treating keyword: Electric Conductivity
 ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type: 4
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
-StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0732 (s)
+StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0246 (s)
 GetNOFBoundaryColours: Number of colours: 1
 StatCurrentSolver: Performing boundary element assembly
 StatCurrentSolver: Assembly of boundary colour: 1
@@ -207,16 +207,16 @@ ListInitElementKeyword: Treating keyword: External Potential
 ListInitElementKeyword: Initiated handle for: > External Potential < of type: -1
 ListInitElementKeyword: Treating keyword: Farfield Potential
 ListInitElementKeyword: Initiated handle for: > Farfield Potential < of type: -1
-StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0006 (s)
+StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0014 (s)
 SetNodalLoads: Finished checking for nodal loads
 DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
-SetDirichletBoundaries: Number of dofs set for potential: 720
+SetDirichletBoundaries: Number of dofs set for potential: 204
 DefUtils::DefaultDirichletBCs: p-element condition setup: potential
-EnforceDirichletConditions: Enforcing total of 146 Dirichlet conditions.
+EnforceDirichletConditions: Enforcing total of 48 Dirichlet conditions.
 EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
 ScaleLinearSystem: Scaling diagonal entries to unity in serial
 ScaleLinearSystem: Computing > DiagScaling < vector
-EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 146
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 48
 DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
 DefaultSolve: Solving linear system with default routines
 GenerateConstraintMatrix: Nothing to do for now
@@ -231,21 +231,20 @@ SolveLinearSystem: Serial linear System Solver: iterative
 IterSolver: Using iterative method: bicgstab
 IterSolver: Matrix is real valued
 CRS_IncompleteLU: ILU(3) (Real), Performing Factorization:
-CRS_IncompleteLU: Number of nonzeros: 111029
+CRS_IncompleteLU: Number of nonzeros: 39885
 CRS_IncompleLU: Recursive round: 1
-CRS_IncompleteLU: Number of nonzeros: 233281
+CRS_IncompleteLU: Number of nonzeros: 70123
 CRS_IncompleLU: Recursive round: 2
-CRS_IncompleteLU: Number of nonzeros: 515335
-CRS_IncompleteLU: Allocated LU matrix of size: 288859
+CRS_IncompleteLU: Number of nonzeros: 96403
+CRS_IncompleteLU: Allocated LU matrix of size: 70401
 CRS_IncompleteLU: Performing incomplete LU
-CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    288860
-CRS_IncompleteLU: ILU(3) (Real), filling (%) :       476
-CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.02
-      10 0.2705E-05
-      14 0.5052E-11
+CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:     70402
+CRS_IncompleteLU: ILU(3) (Real), filling (%) :       304
+CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.01
+       8 0.2195E-10
 BackScaleLinearSystem: Scaling back to original scale
 ComputeNorm: Computing norm of solution
-ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.58269366      2.0000000     ) :: static current conduction
+ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.57927888      2.0000000     ) :: static current conduction
 SolveSystem: System solved
 SolveSystem: Finished solving the system
 InitializeToZero: Initializing the linear system to zero
@@ -256,7 +255,7 @@ ListInitElementKeyword: Treating keyword: Electric Conductivity
 ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type: 4
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
-StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0415 (s)
+StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0136 (s)
 GetNOFBoundaryColours: Number of colours: 1
 StatCurrentSolver: Performing boundary element assembly
 StatCurrentSolver: Assembly of boundary colour: 1
@@ -268,16 +267,16 @@ ListInitElementKeyword: Treating keyword: External Potential
 ListInitElementKeyword: Initiated handle for: > External Potential < of type: -1
 ListInitElementKeyword: Treating keyword: Farfield Potential
 ListInitElementKeyword: Initiated handle for: > Farfield Potential < of type: -1
-StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0004 (s)
+StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0008 (s)
 SetNodalLoads: Finished checking for nodal loads
 DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
-SetDirichletBoundaries: Number of dofs set for potential: 720
+SetDirichletBoundaries: Number of dofs set for potential: 204
 DefUtils::DefaultDirichletBCs: p-element condition setup: potential
-EnforceDirichletConditions: Enforcing total of 146 Dirichlet conditions.
+EnforceDirichletConditions: Enforcing total of 48 Dirichlet conditions.
 EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
 ScaleLinearSystem: Scaling diagonal entries to unity in serial
 ScaleLinearSystem: Computing > DiagScaling < vector
-EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 146
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 48
 DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
 DefaultSolve: Solving linear system with default routines
 GenerateConstraintMatrix: Nothing to do for now
@@ -293,13 +292,13 @@ IterSolver: Using iterative method: bicgstab
 IterSolver: Matrix is real valued
 CRS_IncompleteLU: ILU(3) (Real), Performing Factorization:
 CRS_IncompleteLU: Performing incomplete LU
-CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    288860
-CRS_IncompleteLU: ILU(3) (Real), filling (%) :       476
-CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.01
-       1 0.5730E-12
+CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:     70402
+CRS_IncompleteLU: ILU(3) (Real), filling (%) :       304
+CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.00
+       1 0.6509E-11
 BackScaleLinearSystem: Scaling back to original scale
 ComputeNorm: Computing norm of solution
-ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.58269366     0.40944182E-10 ) :: static current conduction
+ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.57927888     0.50334952E-08 ) :: static current conduction
 SolveSystem: System solved
 SolveSystem: Finished solving the system
 DefaultFinish: Finished solver: static current conduction
@@ -308,19 +307,19 @@ RefineMesh: ----------- M E S H   R E F I N E M E N T --------------
 RefineMesh: Initializing stuff on coarsest level!
 FindMeshEdges: Determining faces in 3D mesh
 FindMeshFaces3D: Finding mesh faces in 3D mesh
-FindMeshFaces3D: Number of faces found: 41491
+FindMeshFaces3D: Number of faces found: 14857
 FindMeshEdges: Determining edges in 3D mesh
 FindMeshEdges3D: Finding mesh edges in 3D mesh
-FindMeshEdges3D: Number of edges found: 27736
-RefineMesh:  Error computation time (cpu-secs):                 0.44366999999999995
-RefineMesh:  Max error      =                                    3.0627581276935411E-003
-RefineMesh:  Error estimate =                                    4.0008727074454601E-004
-VariableAdd: Adding variable > Hvalue < of size 5147
-VariableAdd: Adding variable > hConvergence < of size 5147
-VariableAdd: Adding variable > potential.error < of size 5147
-VariableAdd: Adding variable > potential.perror < of size 5147
-VariableAdd: Adding variable > potential.eRef < of size 5147
-VariableAdd: Adding variable > hRef < of size 5147
+FindMeshEdges3D: Number of edges found: 10495
+RefineMesh:  Error computation time (cpu-secs):                 0.15463900000000000
+RefineMesh:  Max error      =                                    5.8161902183308843E-003
+RefineMesh:  Error estimate =                                    9.7992840085272550E-004
+VariableAdd: Adding variable > Hvalue < of size 2141
+VariableAdd: Adding variable > hConvergence < of size 2141
+VariableAdd: Adding variable > potential.error < of size 2141
+VariableAdd: Adding variable > potential.perror < of size 2141
+VariableAdd: Adding variable > potential.eRef < of size 2141
+VariableAdd: Adding variable > hRef < of size 2141
 RefineMesh: Using Gmsh library for mesh refinement
 SetMeshDimension: Dimension of mesh is: 3
 SetMeshDimension: Max dimension of mesh is: 3
@@ -332,7 +331,7 @@ WARNING:: ListFind:
 RefineMesh: Mesh input file:
 RefineMesh: Gmsh command: gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh
 Info    : Running 'gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh' [Gmsh 4.14.0-git-7c97e80b8, 1 node, max. 6 threads]
-Info    : Started on Thu Oct 10 13:08:46 2024
+Info    : Started on Thu Oct 10 13:19:27 2024
 Info    : Reading 'case.geo'...
 Info    : Reading 'case.step'...
 Info    :  - Label 'Shapes/Layer1_p0' (3D)
@@ -342,14 +341,14 @@ Info    : Done reading 'case.geo'
 Info    : Reading 'gmsh_bgmesh.pos'...
 Info    : Done reading 'gmsh_bgmesh.pos'
 Info    : Meshing 1D...
-Info    : [  0%] Meshing curve 5 (Circle)
-Info    : [  0%] Meshing curve 3 (Line)
-Info    : [  0%] Meshing curve 6 (Line)
 Info    : [  0%] Meshing curve 4 (Circle)
-Info    : [  0%] Meshing curve 2 (Circle)
 Info    : [  0%] Meshing curve 1 (Line)
-Info    : [  0%] Meshing curve 7 (Circle)
-Info    : [  0%] Meshing curve 8 (Circle)
+Info    : [  0%] Meshing curve 2 (Circle)
+Info    : [  0%] Meshing curve 6 (Line)
+Info    : [  0%] Meshing curve 3 (Line)
+Info    : [  0%] Meshing curve 5 (Circle)
+Info    : [ 10%] Meshing curve 7 (Circle)
+Info    : [ 10%] Meshing curve 8 (Circle)
 Info    : [ 10%] Meshing curve 9 (Line)
 Info    : [ 10%] Meshing curve 10 (Circle)
 Info    : [ 10%] Meshing curve 11 (Circle)
@@ -359,20 +358,20 @@ Info    : [ 10%] Meshing curve 14 (Circle)
 Info    : [ 10%] Meshing curve 15 (Circle)
 Info    : [ 10%] Meshing curve 16 (Circle)
 Info    : [ 10%] Meshing curve 17 (Circle)
-Info    : [ 20%] Meshing curve 18 (Circle)
-Info    : [ 20%] Meshing curve 19 (Circle)
-Info    : [ 20%] Meshing curve 20 (Circle)
-Info    : [ 20%] Meshing curve 21 (Line)
-Info    : [ 20%] Meshing curve 22 (Circle)
-Info    : [ 20%] Meshing curve 23 (Line)
+Info    : [ 10%] Meshing curve 18 (Circle)
+Info    : [ 10%] Meshing curve 19 (Circle)
+Info    : [ 10%] Meshing curve 20 (Circle)
+Info    : [ 10%] Meshing curve 21 (Line)
+Info    : [ 10%] Meshing curve 22 (Circle)
+Info    : [ 10%] Meshing curve 23 (Line)
 Info    : [ 20%] Meshing curve 24 (Circle)
 Info    : [ 20%] Meshing curve 25 (Line)
 Info    : [ 20%] Meshing curve 26 (Circle)
 Info    : [ 20%] Meshing curve 27 (Line)
-Info    : [ 20%] Meshing curve 28 (Circle)
-Info    : [ 20%] Meshing curve 29 (Circle)
-Info    : [ 20%] Meshing curve 30 (Circle)
-Info    : [ 20%] Meshing curve 31 (Circle)
+Info    : [ 30%] Meshing curve 28 (Circle)
+Info    : [ 30%] Meshing curve 29 (Circle)
+Info    : [ 30%] Meshing curve 30 (Circle)
+Info    : [ 30%] Meshing curve 31 (Circle)
 Info    : [ 30%] Meshing curve 32 (Circle)
 Info    : [ 30%] Meshing curve 33 (Circle)
 Info    : [ 30%] Meshing curve 34 (Circle)
@@ -380,29 +379,29 @@ Info    : [ 30%] Meshing curve 35 (Circle)
 Info    : [ 30%] Meshing curve 36 (Circle)
 Info    : [ 30%] Meshing curve 37 (Line)
 Info    : [ 30%] Meshing curve 38 (Circle)
+Info    : [ 40%] Meshing curve 42 (Circle)
 Info    : [ 30%] Meshing curve 39 (Line)
 Info    : [ 30%] Meshing curve 40 (Circle)
-Info    : [ 30%] Meshing curve 41 (Line)
-Info    : [ 30%] Meshing curve 42 (Circle)
-Info    : [ 30%] Meshing curve 43 (Line)
-Info    : [ 30%] Meshing curve 44 (Circle)
-Info    : [ 30%] Meshing curve 45 (Circle)
+Info    : [ 40%] Meshing curve 43 (Line)
+Info    : [ 40%] Meshing curve 44 (Circle)
+Info    : [ 40%] Meshing curve 45 (Circle)
 Info    : [ 40%] Meshing curve 46 (Circle)
+Info    : [ 40%] Meshing curve 41 (Line)
 Info    : [ 40%] Meshing curve 47 (Circle)
 Info    : [ 40%] Meshing curve 48 (Circle)
 Info    : [ 40%] Meshing curve 49 (Circle)
 Info    : [ 40%] Meshing curve 50 (Circle)
-Info    : [ 50%] Meshing curve 51 (Circle)
-Info    : [ 50%] Meshing curve 52 (Circle)
-Info    : [ 50%] Meshing curve 53 (Line)
-Info    : [ 50%] Meshing curve 54 (Circle)
-Info    : [ 50%] Meshing curve 55 (Line)
-Info    : [ 50%] Meshing curve 56 (Circle)
-Info    : [ 50%] Meshing curve 57 (Line)
-Info    : [ 50%] Meshing curve 58 (Circle)
-Info    : [ 50%] Meshing curve 59 (Line)
-Info    : [ 50%] Meshing curve 60 (Circle)
-Info    : [ 60%] Meshing curve 61 (Circle)
+Info    : [ 40%] Meshing curve 51 (Circle)
+Info    : [ 40%] Meshing curve 52 (Circle)
+Info    : [ 40%] Meshing curve 53 (Line)
+Info    : [ 40%] Meshing curve 54 (Circle)
+Info    : [ 40%] Meshing curve 55 (Line)
+Info    : [ 40%] Meshing curve 56 (Circle)
+Info    : [ 40%] Meshing curve 57 (Line)
+Info    : [ 40%] Meshing curve 58 (Circle)
+Info    : [ 40%] Meshing curve 59 (Line)
+Info    : [ 40%] Meshing curve 60 (Circle)
+Info    : [ 40%] Meshing curve 61 (Circle)
 Info    : [ 60%] Meshing curve 62 (Circle)
 Info    : [ 60%] Meshing curve 63 (Circle)
 Info    : [ 60%] Meshing curve 64 (Circle)
@@ -412,7 +411,7 @@ Info    : [ 60%] Meshing curve 67 (Circle)
 Info    : [ 60%] Meshing curve 68 (Circle)
 Info    : [ 60%] Meshing curve 69 (Line)
 Info    : [ 60%] Meshing curve 70 (Circle)
-Info    : [ 60%] Meshing curve 71 (Line)
+Info    : [ 70%] Meshing curve 71 (Line)
 Info    : [ 70%] Meshing curve 72 (Circle)
 Info    : [ 70%] Meshing curve 73 (Line)
 Info    : [ 70%] Meshing curve 74 (Circle)
@@ -423,10 +422,10 @@ Info    : [ 70%] Meshing curve 78 (Circle)
 Info    : [ 70%] Meshing curve 79 (Circle)
 Info    : [ 70%] Meshing curve 80 (Circle)
 Info    : [ 70%] Meshing curve 81 (Circle)
-Info    : [ 70%] Meshing curve 82 (Circle)
-Info    : [ 70%] Meshing curve 83 (Circle)
-Info    : [ 70%] Meshing curve 84 (Circle)
-Info    : [ 70%] Meshing curve 85 (Line)
+Info    : [ 80%] Meshing curve 82 (Circle)
+Info    : [ 80%] Meshing curve 83 (Circle)
+Info    : [ 80%] Meshing curve 84 (Circle)
+Info    : [ 80%] Meshing curve 85 (Line)
 Info    : [ 80%] Meshing curve 86 (Circle)
 Info    : [ 80%] Meshing curve 87 (Line)
 Info    : [ 80%] Meshing curve 88 (Circle)
@@ -435,128 +434,122 @@ Info    : [ 80%] Meshing curve 90 (Circle)
 Info    : [ 80%] Meshing curve 91 (Line)
 Info    : [ 80%] Meshing curve 92 (Circle)
 Info    : [ 80%] Meshing curve 93 (Circle)
-Info    : [ 80%] Meshing curve 94 (Circle)
 Info    : [ 80%] Meshing curve 95 (Circle)
+Info    : [ 80%] Meshing curve 94 (Circle)
 Info    : [ 80%] Meshing curve 96 (Circle)
-Info    : [ 80%] Meshing curve 97 (Circle)
-Info    : [ 80%] Meshing curve 98 (Circle)
+Info    : [ 90%] Meshing curve 97 (Circle)
+Info    : [ 90%] Meshing curve 98 (Circle)
 Info    : [ 90%] Meshing curve 99 (Circle)
+Info    : [ 90%] Meshing curve 100 (Circle)
 Info    : [ 90%] Meshing curve 101 (Line)
 Info    : [ 90%] Meshing curve 102 (Circle)
 Info    : [ 90%] Meshing curve 103 (Line)
-Info    : [ 90%] Meshing curve 100 (Circle)
 Info    : [ 90%] Meshing curve 104 (Circle)
 Info    : [ 90%] Meshing curve 105 (Line)
 Info    : [100%] Meshing curve 106 (Circle)
 Info    : [100%] Meshing curve 107 (Line)
 Info    : [100%] Meshing curve 108 (Circle)
-Info    : Done meshing 1D (Wall 0.0466008s, CPU 0.262834s)
+Info    : Done meshing 1D (Wall 0.0379352s, CPU 0.207113s)
 Info    : Meshing 2D...
-Info    : [  0%] Meshing surface 6 (Torus, Frontal-Delaunay)
-Info    : [  0%] Meshing surface 4 (Cylinder, Frontal-Delaunay)
-Info    : [  0%] Meshing surface 2 (Cylinder, Frontal-Delaunay)
 Info    : [  0%] Meshing surface 1 (Cylinder, Frontal-Delaunay)
 Info    : [  0%] Meshing surface 5 (Torus, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 4 (Cylinder, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 2 (Cylinder, Frontal-Delaunay)
 Info    : [  0%] Meshing surface 3 (Cylinder, Frontal-Delaunay)
-Info    : [  0%] Meshing surface 7 (Torus, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 6 (Torus, Frontal-Delaunay)
+Info    : [ 10%] Meshing surface 7 (Torus, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 8 (Torus, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 9 (Cylinder, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 10 (Cylinder, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 11 (Cylinder, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 12 (Cylinder, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 13 (Torus, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 14 (Torus, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 15 (Torus, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 16 (Torus, Frontal-Delaunay)
-Info    : [ 30%] Meshing surface 17 (Cylinder, Frontal-Delaunay)
-Info    : [ 30%] Meshing surface 18 (Cylinder, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 14 (Torus, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 15 (Torus, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 16 (Torus, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 17 (Cylinder, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 18 (Cylinder, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 19 (Cylinder, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 20 (Cylinder, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 21 (Torus, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 22 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 23 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 24 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 25 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 26 (Cylinder, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 23 (Torus, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 24 (Torus, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 25 (Cylinder, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 26 (Cylinder, Frontal-Delaunay)
 Info    : [ 40%] Meshing surface 27 (Cylinder, Frontal-Delaunay)
 Info    : [ 40%] Meshing surface 28 (Cylinder, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 29 (Torus, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 30 (Torus, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 31 (Torus, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 32 (Torus, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 33 (Cylinder, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 34 (Cylinder, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 35 (Cylinder, Frontal-Delaunay)
-Info    : [ 50%] Meshing surface 36 (Cylinder, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 29 (Torus, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 30 (Torus, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 31 (Torus, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 32 (Torus, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 33 (Cylinder, Frontal-Delaunay)
+Info    : [ 40%] Meshing surface 34 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 35 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 36 (Cylinder, Frontal-Delaunay)
 Info    : [ 60%] Meshing surface 37 (Torus, Frontal-Delaunay)
 Info    : [ 60%] Meshing surface 38 (Torus, Frontal-Delaunay)
 Info    : [ 60%] Meshing surface 39 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 40 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 41 (Cylinder, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 42 (Cylinder, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 43 (Cylinder, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 44 (Cylinder, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 45 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 46 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 47 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 48 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 49 (Cylinder, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 50 (Cylinder, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 51 (Cylinder, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 52 (Cylinder, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 53 (Plane, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 54 (Plane, Frontal-Delaunay)
-Info    : Done meshing 2D (Wall 0.0890457s, CPU 0.509978s)
+Info    : [ 60%] Meshing surface 40 (Torus, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 41 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 42 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 43 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 44 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 45 (Torus, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 46 (Torus, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 47 (Torus, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 48 (Torus, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 49 (Cylinder, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 50 (Cylinder, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 51 (Cylinder, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 52 (Cylinder, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 53 (Plane, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 54 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0481306s, CPU 0.266865s)
 Info    : Meshing 3D...
 Info    : 3D Meshing 1 volume with 1 connected component
-Info    : Input mesh hash d8117eec3b3f1e2
-Info    : Creating an empty mesh with 5755 vertices
+Info    : Input mesh hash 88d327b7ff6b68be
+Info    : Creating an empty mesh with 3158 vertices
 Info    : Initialization of tet. mesh
-Info    : Delaunay of       5751 points on   2 threads - mesh.nvert: 4         
+Info    : Delaunay of       3154 points on   1 threads - mesh.nvert: 4         
 Info    : All volumes of the BRep were found and colorized accordingly
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of      14532 points on   2 threads - mesh.nvert: 5755      
-Info    :           -      12497 points filtered
-Info    :           =       2035 points added
+Info    : Delaunay of       6619 points on   1 threads - mesh.nvert: 3158      
+Info    :           -       5816 points filtered
+Info    :           =        803 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of       3939 points on   1 threads - mesh.nvert: 7790      
-Info    :           -       2705 points filtered
-Info    :           =       1234 points added
+Info    : Delaunay of       1264 points on   1 threads - mesh.nvert: 3961      
+Info    :           -        841 points filtered
+Info    :           =        423 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of        484 points on   1 threads - mesh.nvert: 9024      
-Info    :           -        208 points filtered
-Info    :           =        276 points added
+Info    : Delaunay of        110 points on   1 threads - mesh.nvert: 4384      
+Info    :           -         38 points filtered
+Info    :           =         72 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of         28 points on   1 threads - mesh.nvert: 9300      
-Info    :           -          4 points filtered
-Info    :           =         24 points added
+Info    : Delaunay of          3 points on   1 threads - mesh.nvert: 4456      
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of          1 points on   1 threads - mesh.nvert: 9324      
-Info    : Computing interpolated mesh sizes...
-Info    : Done computing interpolated mesh sizes
-Info    : Improving       1404 tet. on   6 thrd (S & ER)
-Info    : Improving         53 tet. on   6 thrd (S & ER)
-Info    : Improving         10 tet. on   6 thrd (S & ER)
-Info    : Improving          8 tet. on   6 thrd (S & ER)
-Info    : Improving          8 tet. on   6 thrd (GSC)
-Info    :  	Final tet. mesh contains 64640 tetrahedra
-Info    :  	Final tet. mesh contains 9325 vertices
-Info    : tEmptyMesh  	 = 	    0.041
-Info    : tVerifyBnd  	 = 	    0.005
+Info    : Improving        643 tet. on   6 thrd (S & ER)
+Info    : Improving         22 tet. on   6 thrd (S & ER)
+Info    : Improving          4 tet. on   6 thrd (S & ER)
+Info    : Improving          4 tet. on   6 thrd (GSC)
+Info    :  	Final tet. mesh contains 30683 tetrahedra
+Info    :  	Final tet. mesh contains 4459 vertices
+Info    : tEmptyMesh  	 = 	    0.015
+Info    : tVerifyBnd  	 = 	    0.003
 Info    : tBndRecovery	 = 	    0.000 (boundary not altered)
 Info    : tConvertMesh	 = 	    0.000 (nothing to convert)
-Info    : tRefine     	 = 	    0.101
-Info    : tOptimize   	 = 	    0.003
-Info    : Done meshing 3D (Wall 0.239229s, CPU 0.886859s)
-Info    : 9325 nodes 50864 elements
+Info    : tRefine     	 = 	    0.041
+Info    : tOptimize   	 = 	    0.002
+Info    : Done meshing 3D (Wall 0.100051s, CPU 0.455725s)
+Info    : 4459 nodes 23762 elements
 Info    : Writing 'case.msh'...
 Info    : Done writing 'case.msh'
-Info    : Stopped on Thu Oct 10 13:08:47 2024 (From start: Wall 0.480878s, CPU 1.8805s)
+Info    : Stopped on Thu Oct 10 13:19:27 2024 (From start: Wall 0.267997s, CPU 1.1211s)
 RefineMesh: Conversion of mesh using Gmsh done. Starting ElmerGrid
 RefineMesh: ElmerGrid command: ElmerGrid 14 2 case.msh -autoclean -out results/refinedmesh
 
@@ -576,7 +569,7 @@ Reading 56 entities in 0D
 Reading 108 entities in 1D
 Reading 54 entities in 2D
 Reading 1 entities in 3D
-Allocating for 9325 knots and 38470 elements.
+Allocating for 4459 knots and 16582 elements.
 Leading element dimension is 3
 BC name for physical group 1 is: pad_1
 BC name for physical group 2 is: pad_2
@@ -592,8 +585,8 @@ Physical tag offset for 1D is 2
 Physical tag offset for 0D is 2
 Geometric tag offset for 1D is 56
 Geometric tag offset for 0D is 164
-Reading 9325 nodes in 219 blocks.
-Reading 38470 elements in 3 blocks.
+Reading 4459 nodes in 219 blocks.
+Reading 16582 elements in 3 blocks.
 Mapping mesh tag 53 to physical tag 1 in 2DIM
 Mapping mesh tag 54 to physical tag 2 in 2DIM
 Mapping mesh tag 1 to physical tag 1 in 3DIM
@@ -601,11 +594,11 @@ Moving bulk elements to boundary elements
 Assuming that boundaries names are already Ok!
 Leading bulk elementtype is 504
 Trailing bulk elementtype is 303
-There are 426 (out of 38470) lower dimensional elements.
-Node 6306 belongs to maximum of 44 elements
-Found correctly 426 side elements.
-Parent elements were reordered up to index 38044.
-Moved 38044 elements (out of 38470) to new positions
+There are 91 (out of 16582) lower dimensional elements.
+Node 4144 belongs to maximum of 56 elements
+Found correctly 91 side elements.
+Parent elements were reordered up to index 16491.
+Moved 16491 elements (out of 16582) to new positions
 Successfully read the mesh from the Gmsh input file.
 Using physical numbering of entities
 
@@ -614,19 +607,19 @@ Elmergrid creating and manipulating meshes:
 Removing lower dimensional boundaries
 Maximum elementtype is 504 and dimension 3
 Minimum elementtype is 504 and dimension 3
-Removed 0 (out of 426) less than 2D boundary elements
-All 9325 nodes were used by the mesh elements
+Removed 0 (out of 91) less than 2D boundary elements
+All 4459 nodes were used by the mesh elements
 Initial boundary interval [1,2]
-BC index unaltered 1 in 216 2D elements of pad_1
-BC index unaltered 2 in 210 2D elements of pad_2
+BC index unaltered 1 in 43 2D elements of pad_1
+BC index unaltered 2 in 48 2D elements of pad_2
 Numbering of boundary types is already ok
 Initial body interval [1,1]
 Numbering of bodies is already ok
 Renumbering of material types completed!
 Bounding box of all nodes in mesh:
-X:[-15.2152,15.2113] Y:[13.5196,21.65] Z:[-35.3304,18.9152]
+X:[-15.2147,15.2113] Y:[13.5196,21.65] Z:[-35.3304,18.9129]
 
-Notice: the longest bounding box side length of [54.2457] is greater than 50.
+Notice: the longest bounding box side length of [54.2433] is greater than 50.
 ElmerGUI includes a library of material properties, defined in SI units.  If using ElmerGUI, 
 then the geometry is expected to have meters as length.  Geometry that exceeds 50 meters 
 in length or width or height may not be intended.  Many Geometry generators assume 
@@ -644,8 +637,8 @@ Elmergrid saving data with method 2:
 -------------------------------------
 Saving mesh in ElmerSolver format to directory results/refinedmesh.
 Reusing an existing directory
-Saving 9325 coordinates to mesh.nodes.
-Saving 38044 element topologies to mesh.elements.
+Saving 4459 coordinates to mesh.nodes.
+Saving 16491 element topologies to mesh.elements.
 Saving boundary elements to mesh.boundary.
 Saving header info to mesh.header.
 Saving names info to mesh.names.
@@ -659,9 +652,9 @@ LoadMesh: Loading serial mesh!
 ElmerAsciiMesh: Performing step: 1
 ElmerAsciiMesh: Base mesh name: results/refinedmesh
 ReadHeaderFile: Reading header info from file: results/refinedmesh/mesh.header
-InitializeMesh: Number of nodes in mesh: 9325
-InitializeMesh: Number of bulk elements in mesh: 38044
-InitializeMesh: Number of boundary elements in mesh: 426
+InitializeMesh: Number of nodes in mesh: 4459
+InitializeMesh: Number of bulk elements in mesh: 16491
+InitializeMesh: Number of boundary elements in mesh: 91
 InitializeMesh: Initial number of max element nodes: 4
 ElmerAsciiMesh: Performing step: 2
 ReadNodesFile: Reading nodes from file: results/refinedmesh/mesh.nodes
@@ -686,20 +679,20 @@ LoadMesh: Loading mesh done
 NonNodalElements: Requested elements require creation of edges
 FindMeshEdges: Determining faces in 3D mesh
 FindMeshFaces3D: Finding mesh faces in 3D mesh
-FindMeshFaces3D: Number of faces found: 81841
+FindMeshFaces3D: Number of faces found: 36138
 FindMeshEdges: Determining edges in 3D mesh
 FindMeshEdges3D: Finding mesh edges in 3D mesh
-FindMeshEdges3D: Number of edges found: 53121
+FindMeshEdges3D: Number of edges found: 24105
 NonNodalElements: Element dofs max: 4
 LoadMesh: Preparing mesh done
-RefineMesh:  Remeshing time (real-secs):                        0.87654781341552734
+RefineMesh:  Remeshing time (real-secs):                        0.47373890876770020
 RefineMesh: The new mesh consists of:
-RefineMesh: Nodal points: 9325
-RefineMesh: Bulk elements: 38044
-RefineMesh: Boundary elements: 426
-VariableAdd: Adding variable > Coordinate 1 < of size 9325
-VariableAdd: Adding variable > Coordinate 2 < of size 9325
-VariableAdd: Adding variable > Coordinate 3 < of size 9325
+RefineMesh: Nodal points: 4459
+RefineMesh: Bulk elements: 16491
+RefineMesh: Boundary elements: 91
+VariableAdd: Adding variable > Coordinate 1 < of size 4459
+VariableAdd: Adding variable > Coordinate 2 < of size 4459
+VariableAdd: Adding variable > Coordinate 3 < of size 4459
 VariableAdd: Adding variable > Time < of size 1
 VariableAdd: Adding variable > Timestep < of size 1
 VariableAdd: Adding variable > Timestep size < of size 1
@@ -708,72 +701,72 @@ VariableAdd: Adding variable > nonlin iter < of size 1
 VariableAdd: Adding variable > coupled iter < of size 1
 VariableAdd: Adding variable > Partition < of size 1
 RefineMesh: Interpolate vectors from old mesh to new mesh!
-VariableAdd: Adding variable > volume current[volume current:3] < of size 27975
-VariableAdd: Adding variable > volume current 1 < of size 9325
-VariableAdd: Adding variable > volume current 2 < of size 9325
-VariableAdd: Adding variable > volume current 3 < of size 9325
+VariableAdd: Adding variable > volume current[volume current:3] < of size 13377
+VariableAdd: Adding variable > volume current 1 < of size 4459
+VariableAdd: Adding variable > volume current 2 < of size 4459
+VariableAdd: Adding variable > volume current 3 < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMeshToMeshQ: Creating quadrant tree for faster interpolation!
 BuildQuandrantTree: Start
 BuildQuandrantTree: Ready
-InterpolateMeshToMesh: Found all nodes in the target mesh
-VariableGet: Interpolation time for > volume current[volume current:3] < :   4.241E-01
+WARNING:: InterpolateMeshToMesh: Points not found: 2 (found 4457)
+VariableGet: Interpolation time for > volume current[volume current:3] < :   2.073E-01
 RefineMesh: Interpolate scalars from old mesh to new mesh!
-VariableAdd: Adding variable > potential < of size 9325
+VariableAdd: Adding variable > potential < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential < :   1.600E-04
-VariableAdd: Adding variable > joule heating < of size 9325
+VariableGet: Interpolation time for > potential < :   7.100E-05
+VariableAdd: Adding variable > joule heating < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > joule heating < :   1.720E-04
-VariableAdd: Adding variable > hvalue < of size 9325
+VariableGet: Interpolation time for > joule heating < :   9.100E-05
+VariableAdd: Adding variable > hvalue < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > hvalue < :   6.800E-05
-VariableAdd: Adding variable > hconvergence < of size 9325
+VariableGet: Interpolation time for > hvalue < :   3.800E-05
+VariableAdd: Adding variable > hconvergence < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > hconvergence < :   5.300E-05
-VariableAdd: Adding variable > potential.error < of size 9325
+VariableGet: Interpolation time for > hconvergence < :   3.400E-05
+VariableAdd: Adding variable > potential.error < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential.error < :   1.040E-04
-VariableAdd: Adding variable > potential.perror < of size 9325
+VariableGet: Interpolation time for > potential.error < :   3.900E-05
+VariableAdd: Adding variable > potential.perror < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential.perror < :   7.300E-05
-VariableAdd: Adding variable > potential.eref < of size 9325
+VariableGet: Interpolation time for > potential.perror < :   3.700E-05
+VariableAdd: Adding variable > potential.eref < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential.eref < :   5.500E-05
-VariableAdd: Adding variable > href < of size 9325
+VariableGet: Interpolation time for > potential.eref < :   3.500E-05
+VariableAdd: Adding variable > href < of size 4459
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > href < :   5.400E-05
-RefineMesh:  Mesh variable update time (cpu-secs):              0.55393199999999987
+VariableGet: Interpolation time for > href < :   3.500E-05
+RefineMesh:  Mesh variable update time (cpu-secs):              0.27255199999999996
 MeshStabParams: Computing stabilization parameters
-MeshStabParams: Elapsed REAL time:     0.0041 (s)
+MeshStabParams: Elapsed REAL time:     0.0016 (s)
 RefineMesh: Updating solver mesh to reflect the new adaptive mesh!
 CreateMatrix: Creating initial permutation
-CreateMatrix: Creating inverse of initial order of size: 9325
+CreateMatrix: Creating inverse of initial order of size: 4459
 CreateMatrix: Creating list matrix for equation: static current conduction
 MakeListMatrix: Creating list matrix
 OptimizeBandwidth: ---------------------------------------------------------
 OptimizeBandwidth: Computing matrix structure for: static current conduction
-OptimizeBandwidth: Initial bandwidth for static current conduction: 9271
-OptimizeBandwidth: Optimized bandwidth for static current conduction: 206
+OptimizeBandwidth: Initial bandwidth for static current conduction: 4420
+OptimizeBandwidth: Optimized bandwidth for static current conduction: 75
 OptimizeBandwidth: ---------------------------------------------------------
 CreateMatrix: Initializing list matrix for equation
-CRS_CreateMatrix: Creating CRS Matrix of size: 9325
-CRS_CreateMatrix: Creating CRS Matrix with nofs: 115567
+CRS_CreateMatrix: Creating CRS Matrix of size: 4459
+CRS_CreateMatrix: Creating CRS Matrix with nofs: 52669
 CreateMatrix: Sparse matrix created
 SetActiveElementsTable: Creating active element table for: static current conduction
-SetActiveElementsTable: Number of active elements found : 38044
-RefineMesh:  Matrix structures update time (cpu-secs):           5.3328000000000042E-002
-ReleaseMeshFaceTables: Releasing number of faces: 41491
-RefineMesh:  Mesh refine took in total (cpu-secs):     1.3135550000000000
-RefineMesh:  Remeshing took in total (real-secs):     0.87654781341552734
+SetActiveElementsTable: Number of active elements found : 16491
+RefineMesh:  Matrix structures update time (cpu-secs):           2.0703000000000027E-002
+ReleaseMeshFaceTables: Releasing number of faces: 14857
+RefineMesh:  Mesh refine took in total (cpu-secs):    0.54988599999999999
+RefineMesh:  Remeshing took in total (real-secs):     0.47373890876770020
 RefineMesh: ----------- E N D   M E S H   R E F I N E M E N T --------------
 Loading user function library: [StatCurrentSolveVec]...[StatCurrentSolver_post]
 StatCurrentSolver_post: ------------------------------------------------
@@ -788,10 +781,10 @@ ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type:
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
 StatCurrentSolver_post: Scaling the field values with weights
-StatCurrentSolver_post:  Total Heating Power   :   2334.7740029193474
+StatCurrentSolver_post:  Total Heating Power   :   6806.6064378191249
 StatCurrentSolver_post: All done
 ComputeNorm: Computing norm of solution
-ComputeChange: SS (ITER=1) (NRM,RELC): ( 0.58863576      2.0000000     ) :: static current conduction
+ComputeChange: SS (ITER=1) (NRM,RELC): ( 0.58068533      2.0000000     ) :: static current conduction
 SolveEquations: Solvers after timestep
 SetActiveElementsTable: Creating active element table for: resultoutput
 SetActiveElementsTable: No active elements found
@@ -803,7 +796,7 @@ ResultOutputSolver: Saving with prefix: case
 ResultOutputSolver: Number of output meshes: 1
 ResultOutputSolver: Skipping inactive mesh: refinedmesh
 ResultOutputSolver: Dimension of mesh is: 3
-ResultOutputSolver: Working on mesh 2: case with 5147 nodes
+ResultOutputSolver: Working on mesh 2: case with 2141 nodes
 ResultOutputSolver: Creating list for saving - if not present
 CreateListForSaving: Field Variables for Saving
 CreateListForSaving: Scalar Field 1: potential
@@ -816,21 +809,21 @@ VtuOutputSolver: Saving number of partitions: 1
 SolverOutputDirectory: Creating directory: results
 VtuOutputSolver: Full filename base is: results/case
 VtuOutputSolver: Saving group 1
-GenerateSaveMask: Allocating NodePerm of size: 5147
-GenerateSaveMask: Allocating ActiveElem of size: 19141
+GenerateSaveMask: Allocating NodePerm of size: 2141
+GenerateSaveMask: Allocating ActiveElem of size: 10208
 GenerateSaveMask: Saving only bulk elements!
-GenerateSaveMask: Number of active elements 18901 out of 19141
-GenerateSaveMask: Number of geometry nodes 5147 out of 5147
-VtuOutputSolver: Total number of elements to save: 18901
-VtuOutputSolver: Total number of geometry nodes to save: 5147
-VtuOutputSolver: Total number of dof nodes to save: 5147
+GenerateSaveMask: Number of active elements 6502 out of 10208
+GenerateSaveMask: Number of geometry nodes 2141 out of 2141
+VtuOutputSolver: Total number of elements to save: 6502
+VtuOutputSolver: Total number of geometry nodes to save: 2141
+VtuOutputSolver: Total number of dof nodes to save: 2141
 VtuOutputSolver: Setting offset for boundary entities: 100
 VtuOutputSolver: Writing the vtu file: results/case_windings_t0001.vtu
 AscBinWriteInit: Initializing buffered ascii/binary writing
 AscBinWriteInit: Writing in binary
 AscBinWriteInit: Writing in double precision
 AscBinWriteInit: Writing to unit number: 58
-AscBinWriteInit: Size of buffer is: 5147
+AscBinWriteInit: Size of buffer is: 2141
 WriteVtuFile: Writing nodal fields
 WriteVtuFile: Saving variable: potential
 WriteVtuFile: Saving variable: joule heating
@@ -854,7 +847,7 @@ VtuOutputSolver: Finished writing vtu file
 VtuOutputSolver: Writing the pvd file: case_windings_t0001.vtu
 VtuOutputSolver: Finished writing pvd file
 VtuOutputSolver: Saving group 2
-GenerateSaveMask: Allocating NodePerm of size: 5147
+GenerateSaveMask: Allocating NodePerm of size: 2141
 GenerateSaveMask: Saving only bulk elements!
 GenerateSaveMask: No active elements forthis mask
 GenerateSavePermutation: Not saving all nodes, creating permutation!
@@ -879,7 +872,7 @@ SolveEquations: Solvers before timestep
 SolveEquations: Solvers in main iteration loop
 SolveEquations: Performing set of solvers in sequence
 SetActiveElementsTable: Creating active element table for: static current conduction
-SetActiveElementsTable: Number of active elements found : 38044
+SetActiveElementsTable: Number of active elements found : 16491
 SingleSolver: Attempting to call solver: 1
 SingleSolver: Solver Equation string is: static current conduction
 StatCurrentSolver: ------------------------------------------------
@@ -895,7 +888,7 @@ ListInitElementKeyword: Treating keyword: Electric Conductivity
 ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type: 4
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
-StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0935 (s)
+StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0421 (s)
 GetNOFBoundaryColours: Number of colours: 1
 StatCurrentSolver: Performing boundary element assembly
 StatCurrentSolver: Assembly of boundary colour: 1
@@ -907,16 +900,16 @@ ListInitElementKeyword: Treating keyword: External Potential
 ListInitElementKeyword: Initiated handle for: > External Potential < of type: -1
 ListInitElementKeyword: Treating keyword: Farfield Potential
 ListInitElementKeyword: Initiated handle for: > Farfield Potential < of type: -1
-StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0009 (s)
+StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0002 (s)
 SetNodalLoads: Finished checking for nodal loads
 DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
-SetDirichletBoundaries: Number of dofs set for potential: 1278
+SetDirichletBoundaries: Number of dofs set for potential: 273
 DefUtils::DefaultDirichletBCs: p-element condition setup: potential
-EnforceDirichletConditions: Enforcing total of 247 Dirichlet conditions.
+EnforceDirichletConditions: Enforcing total of 61 Dirichlet conditions.
 EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
 ScaleLinearSystem: Scaling diagonal entries to unity in serial
 ScaleLinearSystem: Computing > DiagScaling < vector
-EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 247
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 61
 DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
 DefaultSolve: Solving linear system with default routines
 GenerateConstraintMatrix: Nothing to do for now
@@ -931,21 +924,21 @@ SolveLinearSystem: Serial linear System Solver: iterative
 IterSolver: Using iterative method: bicgstab
 IterSolver: Matrix is real valued
 CRS_IncompleteLU: ILU(3) (Real), Performing Factorization:
-CRS_IncompleteLU: Number of nonzeros: 223177
+CRS_IncompleteLU: Number of nonzeros: 97291
 CRS_IncompleLU: Recursive round: 1
-CRS_IncompleteLU: Number of nonzeros: 532789
+CRS_IncompleteLU: Number of nonzeros: 206481
 CRS_IncompleLU: Recursive round: 2
-CRS_IncompleteLU: Number of nonzeros: 1567665
-CRS_IncompleteLU: Allocated LU matrix of size: 736593
+CRS_IncompleteLU: Number of nonzeros: 473991
+CRS_IncompleteLU: Allocated LU matrix of size: 260169
 CRS_IncompleteLU: Performing incomplete LU
-CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    736594
-CRS_IncompleteLU: ILU(3) (Real), filling (%) :       637
-CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.08
-      10 0.2120E-07
-      15 0.6052E-10
+CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    260170
+CRS_IncompleteLU: ILU(3) (Real), filling (%) :       493
+CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.02
+      10 0.1329E-07
+      13 0.1644E-11
 BackScaleLinearSystem: Scaling back to original scale
 ComputeNorm: Computing norm of solution
-ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.58879578     0.27181614E-03 ) :: static current conduction
+ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.58111675     0.74266821E-03 ) :: static current conduction
 SolveSystem: System solved
 SolveSystem: Finished solving the system
 InitializeToZero: Initializing the linear system to zero
@@ -956,7 +949,7 @@ ListInitElementKeyword: Treating keyword: Electric Conductivity
 ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type: 4
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
-StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0949 (s)
+StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0403 (s)
 GetNOFBoundaryColours: Number of colours: 1
 StatCurrentSolver: Performing boundary element assembly
 StatCurrentSolver: Assembly of boundary colour: 1
@@ -968,16 +961,16 @@ ListInitElementKeyword: Treating keyword: External Potential
 ListInitElementKeyword: Initiated handle for: > External Potential < of type: -1
 ListInitElementKeyword: Treating keyword: Farfield Potential
 ListInitElementKeyword: Initiated handle for: > Farfield Potential < of type: -1
-StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0006 (s)
+StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0002 (s)
 SetNodalLoads: Finished checking for nodal loads
 DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
-SetDirichletBoundaries: Number of dofs set for potential: 1278
+SetDirichletBoundaries: Number of dofs set for potential: 273
 DefUtils::DefaultDirichletBCs: p-element condition setup: potential
-EnforceDirichletConditions: Enforcing total of 247 Dirichlet conditions.
+EnforceDirichletConditions: Enforcing total of 61 Dirichlet conditions.
 EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
 ScaleLinearSystem: Scaling diagonal entries to unity in serial
 ScaleLinearSystem: Computing > DiagScaling < vector
-EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 247
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 61
 DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
 DefaultSolve: Solving linear system with default routines
 GenerateConstraintMatrix: Nothing to do for now
@@ -993,21 +986,21 @@ IterSolver: Using iterative method: bicgstab
 IterSolver: Matrix is real valued
 CRS_IncompleteLU: ILU(3) (Real), Performing Factorization:
 CRS_IncompleteLU: Performing incomplete LU
-CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    736594
-CRS_IncompleteLU: ILU(3) (Real), filling (%) :       637
-CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.03
-       1 0.4374E-10
+CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    260170
+CRS_IncompleteLU: ILU(3) (Real), filling (%) :       493
+CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.01
+       1 0.9467E-12
 BackScaleLinearSystem: Scaling back to original scale
 ComputeNorm: Computing norm of solution
-ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.58879579     0.25695144E-08 ) :: static current conduction
+ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.58111675     0.66844943E-09 ) :: static current conduction
 SolveSystem: System solved
 SolveSystem: Finished solving the system
 DefaultFinish: Finished solver: static current conduction
 RefineMesh: 
 RefineMesh: ----------- M E S H   R E F I N E M E N T --------------
-RefineMesh:  Error computation time (cpu-secs):                 0.80107799999999996
-RefineMesh:  Max error      =                                    1.1450734001794568E-003
-RefineMesh:  Error estimate =                                    2.0468259017764699E-004
+RefineMesh:  Error computation time (cpu-secs):                 0.33387600000000006
+RefineMesh:  Max error      =                                    3.2021479939115141E-003
+RefineMesh:  Error estimate =                                    4.2981518178542119E-004
 RefineMesh: Using Gmsh library for mesh refinement
 SetMeshDimension: Dimension of mesh is: 3
 SetMeshDimension: Max dimension of mesh is: 3
@@ -1019,7 +1012,7 @@ WARNING:: ListFind:
 RefineMesh: Mesh input file:
 RefineMesh: Gmsh command: gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh
 Info    : Running 'gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh' [Gmsh 4.14.0-git-7c97e80b8, 1 node, max. 6 threads]
-Info    : Started on Thu Oct 10 13:08:49 2024
+Info    : Started on Thu Oct 10 13:19:29 2024
 Info    : Reading 'case.geo'...
 Info    : Reading 'case.step'...
 Info    :  - Label 'Shapes/Layer1_p0' (3D)
@@ -1029,14 +1022,14 @@ Info    : Done reading 'case.geo'
 Info    : Reading 'gmsh_bgmesh.pos'...
 Info    : Done reading 'gmsh_bgmesh.pos'
 Info    : Meshing 1D...
-Info    : [  0%] Meshing curve 1 (Line)
-Info    : [  0%] Meshing curve 3 (Line)
 Info    : [  0%] Meshing curve 4 (Circle)
-Info    : [  0%] Meshing curve 6 (Line)
 Info    : [  0%] Meshing curve 5 (Circle)
+Info    : [  0%] Meshing curve 6 (Line)
 Info    : [  0%] Meshing curve 2 (Circle)
-Info    : [  0%] Meshing curve 7 (Circle)
-Info    : [  0%] Meshing curve 8 (Circle)
+Info    : [  0%] Meshing curve 3 (Line)
+Info    : [  0%] Meshing curve 1 (Line)
+Info    : [ 10%] Meshing curve 7 (Circle)
+Info    : [ 10%] Meshing curve 8 (Circle)
 Info    : [ 10%] Meshing curve 9 (Line)
 Info    : [ 10%] Meshing curve 10 (Circle)
 Info    : [ 10%] Meshing curve 11 (Circle)
@@ -1046,7 +1039,7 @@ Info    : [ 10%] Meshing curve 14 (Circle)
 Info    : [ 10%] Meshing curve 15 (Circle)
 Info    : [ 10%] Meshing curve 16 (Circle)
 Info    : [ 10%] Meshing curve 17 (Circle)
-Info    : [ 20%] Meshing curve 18 (Circle)
+Info    : [ 10%] Meshing curve 18 (Circle)
 Info    : [ 20%] Meshing curve 19 (Circle)
 Info    : [ 20%] Meshing curve 20 (Circle)
 Info    : [ 20%] Meshing curve 21 (Line)
@@ -1056,7 +1049,7 @@ Info    : [ 20%] Meshing curve 24 (Circle)
 Info    : [ 20%] Meshing curve 25 (Line)
 Info    : [ 20%] Meshing curve 26 (Circle)
 Info    : [ 20%] Meshing curve 27 (Line)
-Info    : [ 20%] Meshing curve 28 (Circle)
+Info    : [ 30%] Meshing curve 28 (Circle)
 Info    : [ 30%] Meshing curve 29 (Circle)
 Info    : [ 30%] Meshing curve 30 (Circle)
 Info    : [ 30%] Meshing curve 31 (Circle)
@@ -1068,62 +1061,62 @@ Info    : [ 30%] Meshing curve 36 (Circle)
 Info    : [ 30%] Meshing curve 37 (Line)
 Info    : [ 30%] Meshing curve 38 (Circle)
 Info    : [ 30%] Meshing curve 39 (Line)
-Info    : [ 30%] Meshing curve 40 (Circle)
-Info    : [ 30%] Meshing curve 41 (Line)
-Info    : [ 30%] Meshing curve 42 (Circle)
-Info    : [ 30%] Meshing curve 43 (Line)
-Info    : [ 30%] Meshing curve 44 (Circle)
-Info    : [ 30%] Meshing curve 45 (Circle)
-Info    : [ 30%] Meshing curve 46 (Circle)
+Info    : [ 40%] Meshing curve 40 (Circle)
+Info    : [ 40%] Meshing curve 41 (Line)
+Info    : [ 40%] Meshing curve 42 (Circle)
+Info    : [ 40%] Meshing curve 43 (Line)
+Info    : [ 40%] Meshing curve 44 (Circle)
+Info    : [ 40%] Meshing curve 45 (Circle)
+Info    : [ 40%] Meshing curve 46 (Circle)
 Info    : [ 40%] Meshing curve 47 (Circle)
 Info    : [ 40%] Meshing curve 48 (Circle)
 Info    : [ 40%] Meshing curve 49 (Circle)
+Info    : [ 40%] Meshing curve 50 (Circle)
+Info    : [ 40%] Meshing curve 51 (Circle)
 Info    : [ 50%] Meshing curve 52 (Circle)
 Info    : [ 50%] Meshing curve 53 (Line)
 Info    : [ 50%] Meshing curve 54 (Circle)
 Info    : [ 50%] Meshing curve 55 (Line)
-Info    : [ 40%] Meshing curve 50 (Circle)
 Info    : [ 50%] Meshing curve 56 (Circle)
 Info    : [ 50%] Meshing curve 57 (Line)
 Info    : [ 50%] Meshing curve 58 (Circle)
 Info    : [ 50%] Meshing curve 59 (Line)
 Info    : [ 50%] Meshing curve 60 (Circle)
-Info    : [ 60%] Meshing curve 61 (Circle)
-Info    : [ 60%] Meshing curve 62 (Circle)
-Info    : [ 60%] Meshing curve 63 (Circle)
-Info    : [ 60%] Meshing curve 64 (Circle)
-Info    : [ 60%] Meshing curve 65 (Circle)
-Info    : [ 40%] Meshing curve 51 (Circle)
-Info    : [ 60%] Meshing curve 68 (Circle)
-Info    : [ 60%] Meshing curve 66 (Circle)
+Info    : [ 50%] Meshing curve 61 (Circle)
+Info    : [ 50%] Meshing curve 62 (Circle)
+Info    : [ 50%] Meshing curve 63 (Circle)
+Info    : [ 50%] Meshing curve 64 (Circle)
+Info    : [ 50%] Meshing curve 65 (Circle)
+Info    : [ 50%] Meshing curve 66 (Circle)
 Info    : [ 60%] Meshing curve 67 (Circle)
+Info    : [ 60%] Meshing curve 68 (Circle)
 Info    : [ 60%] Meshing curve 69 (Line)
 Info    : [ 60%] Meshing curve 70 (Circle)
 Info    : [ 60%] Meshing curve 71 (Line)
-Info    : [ 70%] Meshing curve 72 (Circle)
-Info    : [ 70%] Meshing curve 73 (Line)
+Info    : [ 60%] Meshing curve 72 (Circle)
+Info    : [ 60%] Meshing curve 73 (Line)
 Info    : [ 70%] Meshing curve 74 (Circle)
 Info    : [ 70%] Meshing curve 75 (Line)
-Info    : [ 70%] Meshing curve 79 (Circle)
 Info    : [ 70%] Meshing curve 76 (Circle)
-Info    : [ 70%] Meshing curve 80 (Circle)
-Info    : [ 70%] Meshing curve 78 (Circle)
 Info    : [ 70%] Meshing curve 77 (Circle)
+Info    : [ 70%] Meshing curve 78 (Circle)
+Info    : [ 70%] Meshing curve 79 (Circle)
+Info    : [ 70%] Meshing curve 80 (Circle)
 Info    : [ 70%] Meshing curve 81 (Circle)
-Info    : [ 70%] Meshing curve 85 (Line)
 Info    : [ 70%] Meshing curve 82 (Circle)
+Info    : [ 80%] Meshing curve 83 (Circle)
+Info    : [ 80%] Meshing curve 84 (Circle)
+Info    : [ 80%] Meshing curve 85 (Line)
 Info    : [ 80%] Meshing curve 86 (Circle)
 Info    : [ 80%] Meshing curve 87 (Line)
-Info    : [ 70%] Meshing curve 83 (Circle)
 Info    : [ 80%] Meshing curve 88 (Circle)
-Info    : [ 70%] Meshing curve 84 (Circle)
 Info    : [ 80%] Meshing curve 89 (Line)
 Info    : [ 80%] Meshing curve 90 (Circle)
 Info    : [ 80%] Meshing curve 91 (Line)
 Info    : [ 80%] Meshing curve 92 (Circle)
-Info    : [ 90%] Meshing curve 93 (Circle)
-Info    : [ 90%] Meshing curve 94 (Circle)
-Info    : [ 90%] Meshing curve 95 (Circle)
+Info    : [ 80%] Meshing curve 93 (Circle)
+Info    : [ 80%] Meshing curve 94 (Circle)
+Info    : [ 80%] Meshing curve 95 (Circle)
 Info    : [ 90%] Meshing curve 96 (Circle)
 Info    : [ 90%] Meshing curve 97 (Circle)
 Info    : [ 90%] Meshing curve 98 (Circle)
@@ -1137,113 +1130,116 @@ Info    : [ 90%] Meshing curve 105 (Line)
 Info    : [ 90%] Meshing curve 106 (Circle)
 Info    : [ 90%] Meshing curve 107 (Line)
 Info    : [ 90%] Meshing curve 108 (Circle)
-Info    : Done meshing 1D (Wall 0.0744148s, CPU 0.307171s)
+Info    : Done meshing 1D (Wall 0.0458465s, CPU 0.25777s)
 Info    : Meshing 2D...
-Info    : [  0%] Meshing surface 3 (Cylinder, Frontal-Delaunay)
 Info    : [  0%] Meshing surface 5 (Torus, Frontal-Delaunay)
-Info    : [  0%] Meshing surface 4 (Cylinder, Frontal-Delaunay)
-Info    : [  0%] Meshing surface 6 (Torus, Frontal-Delaunay)
-Info    : [  0%] Meshing surface 1 (Cylinder, Frontal-Delaunay)
 Info    : [  0%] Meshing surface 2 (Cylinder, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 7 (Torus, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 8 (Torus, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 9 (Cylinder, Frontal-Delaunay)
-Info    : [ 10%] Meshing surface 10 (Cylinder, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 4 (Cylinder, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 1 (Cylinder, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 3 (Cylinder, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 6 (Torus, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 7 (Torus, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 8 (Torus, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 9 (Cylinder, Frontal-Delaunay)
+Info    : [  0%] Meshing surface 10 (Cylinder, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 11 (Cylinder, Frontal-Delaunay)
 Info    : [ 10%] Meshing surface 12 (Cylinder, Frontal-Delaunay)
-Info    : [ 20%] Meshing surface 13 (Torus, Frontal-Delaunay)
-Info    : [ 20%] Meshing surface 14 (Torus, Frontal-Delaunay)
+Info    : [ 10%] Meshing surface 13 (Torus, Frontal-Delaunay)
+Info    : [ 10%] Meshing surface 14 (Torus, Frontal-Delaunay)
 Info    : [ 20%] Meshing surface 15 (Torus, Frontal-Delaunay)
 Info    : [ 20%] Meshing surface 16 (Torus, Frontal-Delaunay)
 Info    : [ 20%] Meshing surface 17 (Cylinder, Frontal-Delaunay)
 Info    : [ 20%] Meshing surface 18 (Cylinder, Frontal-Delaunay)
-Info    : [ 30%] Meshing surface 19 (Cylinder, Frontal-Delaunay)
-Info    : [ 30%] Meshing surface 20 (Cylinder, Frontal-Delaunay)
-Info    : [ 30%] Meshing surface 21 (Torus, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 19 (Cylinder, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 20 (Cylinder, Frontal-Delaunay)
+Info    : [ 20%] Meshing surface 21 (Torus, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 22 (Torus, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 23 (Torus, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 24 (Torus, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 25 (Cylinder, Frontal-Delaunay)
 Info    : [ 30%] Meshing surface 26 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 27 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 28 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 29 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 30 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 31 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 32 (Torus, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 33 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 34 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 35 (Cylinder, Frontal-Delaunay)
-Info    : [ 40%] Meshing surface 36 (Cylinder, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 27 (Cylinder, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 28 (Cylinder, Frontal-Delaunay)
+Info    : [ 30%] Meshing surface 29 (Torus, Frontal-Delaunay)
+Info    : [ 50%] Meshing surface 30 (Torus, Frontal-Delaunay)
+Info    : [ 50%] Meshing surface 31 (Torus, Frontal-Delaunay)
+Info    : [ 50%] Meshing surface 32 (Torus, Frontal-Delaunay)
+Info    : [ 50%] Meshing surface 33 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 34 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 35 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 36 (Cylinder, Frontal-Delaunay)
 Info    : [ 60%] Meshing surface 37 (Torus, Frontal-Delaunay)
 Info    : [ 60%] Meshing surface 38 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 39 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 40 (Torus, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 41 (Cylinder, Frontal-Delaunay)
-Info    : [ 70%] Meshing surface 42 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 39 (Torus, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 40 (Torus, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 41 (Cylinder, Frontal-Delaunay)
+Info    : [ 60%] Meshing surface 42 (Cylinder, Frontal-Delaunay)
 Info    : [ 70%] Meshing surface 43 (Cylinder, Frontal-Delaunay)
 Info    : [ 70%] Meshing surface 44 (Cylinder, Frontal-Delaunay)
-Info    : [ 80%] Meshing surface 45 (Torus, Frontal-Delaunay)
-Info    : [ 80%] Meshing surface 46 (Torus, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 45 (Torus, Frontal-Delaunay)
+Info    : [ 70%] Meshing surface 46 (Torus, Frontal-Delaunay)
 Info    : [ 80%] Meshing surface 47 (Torus, Frontal-Delaunay)
 Info    : [ 80%] Meshing surface 48 (Torus, Frontal-Delaunay)
 Info    : [ 80%] Meshing surface 49 (Cylinder, Frontal-Delaunay)
 Info    : [ 80%] Meshing surface 50 (Cylinder, Frontal-Delaunay)
 Info    : [ 80%] Meshing surface 51 (Cylinder, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 52 (Cylinder, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 53 (Plane, Frontal-Delaunay)
-Info    : [ 90%] Meshing surface 54 (Plane, Frontal-Delaunay)
-Info    : Done meshing 2D (Wall 0.12233s, CPU 0.655572s)
+Info    : [ 80%] Meshing surface 52 (Cylinder, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 53 (Plane, Frontal-Delaunay)
+Info    : [ 80%] Meshing surface 54 (Plane, Frontal-Delaunay)
+Info    : Done meshing 2D (Wall 0.0691676s, CPU 0.382394s)
 Info    : Meshing 3D...
 Info    : 3D Meshing 1 volume with 1 connected component
-Info    : Input mesh hash ced9a2c9450d87f2
-Info    : Creating an empty mesh with 7535 vertices
+Info    : Input mesh hash afab33e020743f9f
+Info    : Creating an empty mesh with 4300 vertices
 Info    : Initialization of tet. mesh
-Info    : Delaunay of       7531 points on   2 threads - mesh.nvert: 4         
+Info    : Delaunay of       4296 points on   2 threads - mesh.nvert: 4         
 Info    : All volumes of the BRep were found and colorized accordingly
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of      20726 points on   2 threads - mesh.nvert: 7535      
-Info    :           -      17524 points filtered
-Info    :           =       3202 points added
+Info    : Delaunay of      10968 points on   2 threads - mesh.nvert: 4300      
+Info    :           -       9248 points filtered
+Info    :           =       1720 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of       6917 points on   2 threads - mesh.nvert: 10737     
-Info    :           -       4802 points filtered
-Info    :           =       2115 points added
+Info    : Delaunay of       3182 points on   1 threads - mesh.nvert: 6020      
+Info    :           -       2130 points filtered
+Info    :           =       1052 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of        973 points on   1 threads - mesh.nvert: 12852     
-Info    :           -        446 points filtered
-Info    :           =        527 points added
+Info    : Delaunay of        428 points on   1 threads - mesh.nvert: 7072      
+Info    :           -        189 points filtered
+Info    :           =        239 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of         80 points on   1 threads - mesh.nvert: 13379     
-Info    :           -         23 points filtered
-Info    :           =         57 points added
+Info    : Delaunay of         40 points on   1 threads - mesh.nvert: 7311      
+Info    :           -         13 points filtered
+Info    :           =         27 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Delaunay of          2 points on   1 threads - mesh.nvert: 13436     
+Info    : Delaunay of          8 points on   1 threads - mesh.nvert: 7338      
+Info    :           -          3 points filtered
+Info    :           =          5 points added
 Info    : Computing interpolated mesh sizes...
 Info    : Done computing interpolated mesh sizes
-Info    : Improving       2131 tet. on   6 thrd (S & ER)
-Info    : Improving         90 tet. on   6 thrd (S & ER)
+Info    : Improving       1137 tet. on   6 thrd (S & ER)
+Info    : Improving         50 tet. on   6 thrd (S & ER)
 Info    : Improving         17 tet. on   6 thrd (S & ER)
-Info    : Improving         14 tet. on   6 thrd (S & ER)
-Info    : Improving         14 tet. on   6 thrd (GSC)
-Info    :  	Final tet. mesh contains 92904 tetrahedra
-Info    :  	Final tet. mesh contains 13438 vertices
-Info    : tEmptyMesh  	 = 	    0.042
-Info    : tVerifyBnd  	 = 	    0.005
+Info    : Improving         15 tet. on   6 thrd (S & ER)
+Info    : Improving         15 tet. on   6 thrd (GSC)
+Info    : Improving          1 tet. on   6 thrd (S & ER)
+Info    :  	Final tet. mesh contains 50075 tetrahedra
+Info    :  	Final tet. mesh contains 7343 vertices
+Info    : tEmptyMesh  	 = 	    0.021
+Info    : tVerifyBnd  	 = 	    0.003
 Info    : tBndRecovery	 = 	    0.000 (boundary not altered)
 Info    : tConvertMesh	 = 	    0.000 (nothing to convert)
-Info    : tRefine     	 = 	    0.135
+Info    : tRefine     	 = 	    0.080
 Info    : tOptimize   	 = 	    0.004
-Info    : Done meshing 3D (Wall 0.293668s, CPU 1.07769s)
-Info    : 13438 nodes 74465 elements
+Info    : Done meshing 3D (Wall 0.182658s, CPU 0.73208s)
+Info    : 7343 nodes 40411 elements
 Info    : Writing 'case.msh'...
 Info    : Done writing 'case.msh'
-Info    : Stopped on Thu Oct 10 13:08:50 2024 (From start: Wall 0.646809s, CPU 2.3207s)
+Info    : Stopped on Thu Oct 10 13:19:29 2024 (From start: Wall 0.395081s, CPU 1.58303s)
 RefineMesh: Conversion of mesh using Gmsh done. Starting ElmerGrid
 RefineMesh: ElmerGrid command: ElmerGrid 14 2 case.msh -autoclean -out results/refinedmesh
 
@@ -1263,7 +1259,7 @@ Reading 56 entities in 0D
 Reading 108 entities in 1D
 Reading 54 entities in 2D
 Reading 1 entities in 3D
-Allocating for 13438 knots and 58541 elements.
+Allocating for 7343 knots and 30808 elements.
 Leading element dimension is 3
 BC name for physical group 1 is: pad_1
 BC name for physical group 2 is: pad_2
@@ -1279,8 +1275,8 @@ Physical tag offset for 1D is 2
 Physical tag offset for 0D is 2
 Geometric tag offset for 1D is 56
 Geometric tag offset for 0D is 164
-Reading 13438 nodes in 219 blocks.
-Reading 58541 elements in 3 blocks.
+Reading 7343 nodes in 219 blocks.
+Reading 30808 elements in 3 blocks.
 Mapping mesh tag 53 to physical tag 1 in 2DIM
 Mapping mesh tag 54 to physical tag 2 in 2DIM
 Mapping mesh tag 1 to physical tag 1 in 3DIM
@@ -1288,11 +1284,11 @@ Moving bulk elements to boundary elements
 Assuming that boundaries names are already Ok!
 Leading bulk elementtype is 504
 Trailing bulk elementtype is 303
-There are 656 (out of 58541) lower dimensional elements.
-Node 8336 belongs to maximum of 44 elements
-Found correctly 656 side elements.
-Parent elements were reordered up to index 57885.
-Moved 57885 elements (out of 58541) to new positions
+There are 50 (out of 30808) lower dimensional elements.
+Node 6362 belongs to maximum of 72 elements
+Found correctly 50 side elements.
+Parent elements were reordered up to index 30758.
+Moved 30758 elements (out of 30808) to new positions
 Successfully read the mesh from the Gmsh input file.
 Using physical numbering of entities
 
@@ -1301,19 +1297,19 @@ Elmergrid creating and manipulating meshes:
 Removing lower dimensional boundaries
 Maximum elementtype is 504 and dimension 3
 Minimum elementtype is 504 and dimension 3
-Removed 0 (out of 656) less than 2D boundary elements
-All 13438 nodes were used by the mesh elements
+Removed 0 (out of 50) less than 2D boundary elements
+All 7343 nodes were used by the mesh elements
 Initial boundary interval [1,2]
-BC index unaltered 1 in 326 2D elements of pad_1
-BC index unaltered 2 in 330 2D elements of pad_2
+BC index unaltered 1 in 33 2D elements of pad_1
+BC index unaltered 2 in 17 2D elements of pad_2
 Numbering of boundary types is already ok
 Initial body interval [1,1]
 Numbering of bodies is already ok
 Renumbering of material types completed!
 Bounding box of all nodes in mesh:
-X:[-15.2152,15.2113] Y:[13.5196,21.65] Z:[-35.3304,18.9152]
+X:[-15.2152,15.2113] Y:[13.5196,21.65] Z:[-35.3304,18.9113]
 
-Notice: the longest bounding box side length of [54.2456] is greater than 50.
+Notice: the longest bounding box side length of [54.2418] is greater than 50.
 ElmerGUI includes a library of material properties, defined in SI units.  If using ElmerGUI, 
 then the geometry is expected to have meters as length.  Geometry that exceeds 50 meters 
 in length or width or height may not be intended.  Many Geometry generators assume 
@@ -1331,8 +1327,8 @@ Elmergrid saving data with method 2:
 -------------------------------------
 Saving mesh in ElmerSolver format to directory results/refinedmesh.
 Reusing an existing directory
-Saving 13438 coordinates to mesh.nodes.
-Saving 57885 element topologies to mesh.elements.
+Saving 7343 coordinates to mesh.nodes.
+Saving 30758 element topologies to mesh.elements.
 Saving boundary elements to mesh.boundary.
 Saving header info to mesh.header.
 Saving names info to mesh.names.
@@ -1346,9 +1342,9 @@ LoadMesh: Loading serial mesh!
 ElmerAsciiMesh: Performing step: 1
 ElmerAsciiMesh: Base mesh name: results/refinedmesh
 ReadHeaderFile: Reading header info from file: results/refinedmesh/mesh.header
-InitializeMesh: Number of nodes in mesh: 13438
-InitializeMesh: Number of bulk elements in mesh: 57885
-InitializeMesh: Number of boundary elements in mesh: 656
+InitializeMesh: Number of nodes in mesh: 7343
+InitializeMesh: Number of bulk elements in mesh: 30758
+InitializeMesh: Number of boundary elements in mesh: 50
 InitializeMesh: Initial number of max element nodes: 4
 ElmerAsciiMesh: Performing step: 2
 ReadNodesFile: Reading nodes from file: results/refinedmesh/mesh.nodes
@@ -1373,20 +1369,20 @@ LoadMesh: Loading mesh done
 NonNodalElements: Requested elements require creation of edges
 FindMeshEdges: Determining faces in 3D mesh
 FindMeshFaces3D: Finding mesh faces in 3D mesh
-FindMeshFaces3D: Number of faces found: 123303
+FindMeshFaces3D: Number of faces found: 65814
 FindMeshEdges: Determining edges in 3D mesh
 FindMeshEdges3D: Finding mesh edges in 3D mesh
-FindMeshEdges3D: Number of edges found: 78855
+FindMeshEdges3D: Number of edges found: 42398
 NonNodalElements: Element dofs max: 4
 LoadMesh: Preparing mesh done
-RefineMesh:  Remeshing time (real-secs):                         1.1989829540252686
+RefineMesh:  Remeshing time (real-secs):                        0.73780798912048340
 RefineMesh: The new mesh consists of:
-RefineMesh: Nodal points: 13438
-RefineMesh: Bulk elements: 57885
-RefineMesh: Boundary elements: 656
-VariableAdd: Adding variable > Coordinate 1 < of size 13438
-VariableAdd: Adding variable > Coordinate 2 < of size 13438
-VariableAdd: Adding variable > Coordinate 3 < of size 13438
+RefineMesh: Nodal points: 7343
+RefineMesh: Bulk elements: 30758
+RefineMesh: Boundary elements: 50
+VariableAdd: Adding variable > Coordinate 1 < of size 7343
+VariableAdd: Adding variable > Coordinate 2 < of size 7343
+VariableAdd: Adding variable > Coordinate 3 < of size 7343
 VariableAdd: Adding variable > Time < of size 1
 VariableAdd: Adding variable > Timestep < of size 1
 VariableAdd: Adding variable > Timestep size < of size 1
@@ -1395,72 +1391,72 @@ VariableAdd: Adding variable > nonlin iter < of size 1
 VariableAdd: Adding variable > coupled iter < of size 1
 VariableAdd: Adding variable > Partition < of size 1
 RefineMesh: Interpolate vectors from old mesh to new mesh!
-VariableAdd: Adding variable > volume current[volume current:3] < of size 40314
-VariableAdd: Adding variable > volume current 1 < of size 13438
-VariableAdd: Adding variable > volume current 2 < of size 13438
-VariableAdd: Adding variable > volume current 3 < of size 13438
+VariableAdd: Adding variable > volume current[volume current:3] < of size 22029
+VariableAdd: Adding variable > volume current 1 < of size 7343
+VariableAdd: Adding variable > volume current 2 < of size 7343
+VariableAdd: Adding variable > volume current 3 < of size 7343
 VariableGet: Performing interpolation with projector
-InterpolateMeshToMesh: Found all nodes in the target mesh
-VariableGet: Interpolation time for > volume current[volume current:3] < :   5.058E-01
+WARNING:: InterpolateMeshToMesh: Points not found: 7 (found 7336)
+VariableGet: Interpolation time for > volume current[volume current:3] < :   2.753E-01
 RefineMesh: Interpolate scalars from old mesh to new mesh!
-VariableAdd: Adding variable > potential < of size 13438
+VariableAdd: Adding variable > potential < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMeshToMeshQ: Creating quadrant tree for faster interpolation!
 BuildQuandrantTree: Start
 BuildQuandrantTree: Ready
-InterpolateMeshToMesh: Found all nodes in the target mesh
-VariableGet: Interpolation time for > potential < :   6.603E-01
-VariableAdd: Adding variable > joule heating < of size 13438
+WARNING:: InterpolateMeshToMesh: Points not found: 8 (found 7335)
+VariableGet: Interpolation time for > potential < :   3.330E-01
+VariableAdd: Adding variable > joule heating < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > joule heating < :   2.710E-04
-VariableAdd: Adding variable > hvalue < of size 13438
+VariableGet: Interpolation time for > joule heating < :   1.990E-04
+VariableAdd: Adding variable > hvalue < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > hvalue < :   1.340E-04
-VariableAdd: Adding variable > hconvergence < of size 13438
+VariableGet: Interpolation time for > hvalue < :   7.100E-05
+VariableAdd: Adding variable > hconvergence < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > hconvergence < :   1.200E-04
-VariableAdd: Adding variable > potential.error < of size 13438
+VariableGet: Interpolation time for > hconvergence < :   8.000E-05
+VariableAdd: Adding variable > potential.error < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential.error < :   1.300E-04
-VariableAdd: Adding variable > potential.perror < of size 13438
+VariableGet: Interpolation time for > potential.error < :   8.900E-05
+VariableAdd: Adding variable > potential.perror < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential.perror < :   9.100E-05
-VariableAdd: Adding variable > potential.eref < of size 13438
+VariableGet: Interpolation time for > potential.perror < :   9.800E-05
+VariableAdd: Adding variable > potential.eref < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > potential.eref < :   1.080E-04
-VariableAdd: Adding variable > href < of size 13438
+VariableGet: Interpolation time for > potential.eref < :   5.500E-05
+VariableAdd: Adding variable > href < of size 7343
 VariableGet: Performing interpolation with projector
 InterpolateMesh2Mesh: Applying exiting projector in interpolation
-VariableGet: Interpolation time for > href < :   1.120E-04
-RefineMesh:  Mesh variable update time (cpu-secs):               1.3606769999999999
+VariableGet: Interpolation time for > href < :   5.500E-05
+RefineMesh:  Mesh variable update time (cpu-secs):              0.71827500000000000
 MeshStabParams: Computing stabilization parameters
-MeshStabParams: Elapsed REAL time:     0.0092 (s)
+MeshStabParams: Elapsed REAL time:     0.0033 (s)
 RefineMesh: Updating solver mesh to reflect the new adaptive mesh!
 CreateMatrix: Creating initial permutation
-CreateMatrix: Creating inverse of initial order of size: 13438
+CreateMatrix: Creating inverse of initial order of size: 7343
 CreateMatrix: Creating list matrix for equation: static current conduction
 MakeListMatrix: Creating list matrix
 OptimizeBandwidth: ---------------------------------------------------------
 OptimizeBandwidth: Computing matrix structure for: static current conduction
-OptimizeBandwidth: Initial bandwidth for static current conduction: 13380
-OptimizeBandwidth: Optimized bandwidth for static current conduction: 204
+OptimizeBandwidth: Initial bandwidth for static current conduction: 7209
+OptimizeBandwidth: Optimized bandwidth for static current conduction: 132
 OptimizeBandwidth: ---------------------------------------------------------
 CreateMatrix: Initializing list matrix for equation
-CRS_CreateMatrix: Creating CRS Matrix of size: 13438
-CRS_CreateMatrix: Creating CRS Matrix with nofs: 171148
+CRS_CreateMatrix: Creating CRS Matrix of size: 7343
+CRS_CreateMatrix: Creating CRS Matrix with nofs: 92139
 CreateMatrix: Sparse matrix created
 SetActiveElementsTable: Creating active element table for: static current conduction
-SetActiveElementsTable: Number of active elements found : 57885
-RefineMesh:  Matrix structures update time (cpu-secs):           7.1128999999999998E-002
-ReleaseMeshFaceTables: Releasing number of faces: 81841
-RefineMesh:  Mesh refine took in total (cpu-secs):     2.6249440000000002
-RefineMesh:  Remeshing took in total (real-secs):      1.1989829540252686
+SetActiveElementsTable: Number of active elements found : 30758
+RefineMesh:  Matrix structures update time (cpu-secs):           4.4359000000000037E-002
+ReleaseMeshFaceTables: Releasing number of faces: 36138
+RefineMesh:  Mesh refine took in total (cpu-secs):     1.3222120000000002
+RefineMesh:  Remeshing took in total (real-secs):     0.73780798912048340
 RefineMesh: ----------- E N D   M E S H   R E F I N E M E N T --------------
 Loading user function library: [StatCurrentSolveVec]...[StatCurrentSolver_post]
 StatCurrentSolver_post: ------------------------------------------------
@@ -1475,10 +1471,10 @@ ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type:
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
 StatCurrentSolver_post: Scaling the field values with weights
-StatCurrentSolver_post:  Total Heating Power   :   2341.1830874859515
+StatCurrentSolver_post:  Total Heating Power   :   291822.46101273323
 StatCurrentSolver_post: All done
 ComputeNorm: Computing norm of solution
-ComputeChange: SS (ITER=2) (NRM,RELC): ( 0.58599647      2.0000000     ) :: static current conduction
+ComputeChange: SS (ITER=2) (NRM,RELC): ( 0.59069793      2.0000000     ) :: static current conduction
 SolveEquations: Solvers after timestep
 SolverActivate: By some logic the mesh is switched here to child mesh!!!
 SolverActivate: Changing Solver 2 mesh to be the 1th Child mesh: refinedmesh
@@ -1491,7 +1487,7 @@ WARNING:: ResultOutputSolver: No output format given, assuming VTU
 ResultOutputSolver: Number of output meshes: 1
 ResultOutputSolver: Skipping inactive mesh: refinedmesh
 ResultOutputSolver: Dimension of mesh is: 3
-ResultOutputSolver: Working on mesh 2: refinedmesh with 9325 nodes
+ResultOutputSolver: Working on mesh 2: refinedmesh with 4459 nodes
 ResultOutputSolver: Recreating list for saving
 CreateListForSaving: Field Variables for Saving
 CreateListForSaving: Scalar Field 1: potential
@@ -1501,18 +1497,18 @@ CreateListForSaving: Vector Field 1: volume current
 ResultOutputSolver: Saving in unstructured VTK XML (.vtu) format
 VtuOutputSolver: Full filename base is: results/case
 VtuOutputSolver: Saving group 1
-GenerateSaveMask: Allocating NodePerm of size: 9325
-GenerateSaveMask: Allocating ActiveElem of size: 38470
+GenerateSaveMask: Allocating NodePerm of size: 4459
+GenerateSaveMask: Allocating ActiveElem of size: 16582
 GenerateSaveMask: Saving only bulk elements!
-GenerateSaveMask: Number of active elements 38044 out of 38470
-GenerateSaveMask: Number of geometry nodes 9325 out of 9325
+GenerateSaveMask: Number of active elements 16491 out of 16582
+GenerateSaveMask: Number of geometry nodes 4459 out of 4459
 VtuOutputSolver: Setting offset for boundary entities: 100
 VtuOutputSolver: Writing the vtu file: results/case_windings_t0002.vtu
 AscBinWriteInit: Initializing buffered ascii/binary writing
 AscBinWriteInit: Writing in binary
 AscBinWriteInit: Writing in double precision
 AscBinWriteInit: Writing to unit number: 58
-AscBinWriteInit: Size of buffer is: 9325
+AscBinWriteInit: Size of buffer is: 4459
 WriteVtuFile: Writing nodal fields
 WriteVtuFile: Saving variable: potential
 WriteVtuFile: Saving variable: joule heating
@@ -1536,7 +1532,7 @@ VtuOutputSolver: Finished writing vtu file
 VtuOutputSolver: Writing the pvd file: case_windings_t0002.vtu
 VtuOutputSolver: Finished writing pvd file
 VtuOutputSolver: Saving group 2
-GenerateSaveMask: Allocating NodePerm of size: 9325
+GenerateSaveMask: Allocating NodePerm of size: 4459
 GenerateSaveMask: Saving only bulk elements!
 GenerateSaveMask: No active elements forthis mask
 GenerateSavePermutation: Not saving all nodes, creating permutation!
@@ -1560,7 +1556,7 @@ SolveEquations: Solvers before timestep
 SolveEquations: Solvers in main iteration loop
 SolveEquations: Performing set of solvers in sequence
 SetActiveElementsTable: Creating active element table for: static current conduction
-SetActiveElementsTable: Number of active elements found : 57885
+SetActiveElementsTable: Number of active elements found : 30758
 SingleSolver: Attempting to call solver: 1
 SingleSolver: Solver Equation string is: static current conduction
 StatCurrentSolver: ------------------------------------------------
@@ -1576,7 +1572,7 @@ ListInitElementKeyword: Treating keyword: Electric Conductivity
 ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type: 4
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
-StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.1364 (s)
+StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0770 (s)
 GetNOFBoundaryColours: Number of colours: 1
 StatCurrentSolver: Performing boundary element assembly
 StatCurrentSolver: Assembly of boundary colour: 1
@@ -1588,16 +1584,16 @@ ListInitElementKeyword: Treating keyword: External Potential
 ListInitElementKeyword: Initiated handle for: > External Potential < of type: -1
 ListInitElementKeyword: Treating keyword: Farfield Potential
 ListInitElementKeyword: Initiated handle for: > Farfield Potential < of type: -1
-StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0013 (s)
+StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0002 (s)
 SetNodalLoads: Finished checking for nodal loads
 DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
-SetDirichletBoundaries: Number of dofs set for potential: 1968
+SetDirichletBoundaries: Number of dofs set for potential: 150
 DefUtils::DefaultDirichletBCs: p-element condition setup: potential
-EnforceDirichletConditions: Enforcing total of 370 Dirichlet conditions.
+EnforceDirichletConditions: Enforcing total of 37 Dirichlet conditions.
 EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
 ScaleLinearSystem: Scaling diagonal entries to unity in serial
 ScaleLinearSystem: Computing > DiagScaling < vector
-EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 370
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 37
 DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
 DefaultSolve: Solving linear system with default routines
 GenerateConstraintMatrix: Nothing to do for now
@@ -1612,21 +1608,21 @@ SolveLinearSystem: Serial linear System Solver: iterative
 IterSolver: Using iterative method: bicgstab
 IterSolver: Matrix is real valued
 CRS_IncompleteLU: ILU(3) (Real), Performing Factorization:
-CRS_IncompleteLU: Number of nonzeros: 342178
+CRS_IncompleteLU: Number of nonzeros: 184255
 CRS_IncompleLU: Recursive round: 1
-CRS_IncompleteLU: Number of nonzeros: 865704
+CRS_IncompleteLU: Number of nonzeros: 458603
 CRS_IncompleLU: Recursive round: 2
-CRS_IncompleteLU: Number of nonzeros: 2871308
-CRS_IncompleteLU: Allocated LU matrix of size: 1264840
+CRS_IncompleteLU: Number of nonzeros: 1434239
+CRS_IncompleteLU: Allocated LU matrix of size: 638559
 CRS_IncompleteLU: Performing incomplete LU
-CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:   1264841
-CRS_IncompleteLU: ILU(3) (Real), filling (%) :       739
-CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.14
-      10 0.4236E-08
-      19 0.3897E-10
+CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    638560
+CRS_IncompleteLU: ILU(3) (Real), filling (%) :       693
+CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.07
+      10 0.3502E-06
+      15 0.4171E-11
 BackScaleLinearSystem: Scaling back to original scale
 ComputeNorm: Computing norm of solution
-ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.58597510     0.36470866E-04 ) :: static current conduction
+ComputeChange: NS (ITER=1) (NRM,RELC): ( 0.59041476     0.47949057E-03 ) :: static current conduction
 SolveSystem: System solved
 SolveSystem: Finished solving the system
 InitializeToZero: Initializing the linear system to zero
@@ -1637,7 +1633,7 @@ ListInitElementKeyword: Treating keyword: Electric Conductivity
 ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type: 4
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
-StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.1842 (s)
+StatCurrentSolverBulkAssembly: Elapsed REAL time:     0.0797 (s)
 GetNOFBoundaryColours: Number of colours: 1
 StatCurrentSolver: Performing boundary element assembly
 StatCurrentSolver: Assembly of boundary colour: 1
@@ -1649,16 +1645,16 @@ ListInitElementKeyword: Treating keyword: External Potential
 ListInitElementKeyword: Initiated handle for: > External Potential < of type: -1
 ListInitElementKeyword: Treating keyword: Farfield Potential
 ListInitElementKeyword: Initiated handle for: > Farfield Potential < of type: -1
-StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0008 (s)
+StatCurrentSolverBCAssembly: Elapsed REAL time:     0.0001 (s)
 SetNodalLoads: Finished checking for nodal loads
 DefUtils::DefaultDirichletBCs: Setting Dirichlet boundary conditions
-SetDirichletBoundaries: Number of dofs set for potential: 1968
+SetDirichletBoundaries: Number of dofs set for potential: 150
 DefUtils::DefaultDirichletBCs: p-element condition setup: potential
-EnforceDirichletConditions: Enforcing total of 370 Dirichlet conditions.
+EnforceDirichletConditions: Enforcing total of 37 Dirichlet conditions.
 EnforceDirichletConditions: Applying Dirichlet conditions using scaled diagonal
 ScaleLinearSystem: Scaling diagonal entries to unity in serial
 ScaleLinearSystem: Computing > DiagScaling < vector
-EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 370
+EnforceDirichletConditions: Dirichlet conditions enforced for dofs: 37
 DefUtils::DefaultDirichletBCs: Dirichlet boundary conditions set
 DefaultSolve: Solving linear system with default routines
 GenerateConstraintMatrix: Nothing to do for now
@@ -1674,23 +1670,23 @@ IterSolver: Using iterative method: bicgstab
 IterSolver: Matrix is real valued
 CRS_IncompleteLU: ILU(3) (Real), Performing Factorization:
 CRS_IncompleteLU: Performing incomplete LU
-CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:   1264841
-CRS_IncompleteLU: ILU(3) (Real), filling (%) :       739
-CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.06
-       1 0.5742E-10
+CRS_IncompleteLU: ILU(3) (Real), NOF nonzeros:    638560
+CRS_IncompleteLU: ILU(3) (Real), filling (%) :       693
+CRS_IncompleteLU: ILU(3) (Real), Factorization ready at (s):     0.03
+       1 0.3397E-11
 BackScaleLinearSystem: Scaling back to original scale
 ComputeNorm: Computing norm of solution
-ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.58597514     0.59917370E-07 ) :: static current conduction
+ComputeChange: NS (ITER=2) (NRM,RELC): ( 0.59041476     0.15817274E-10 ) :: static current conduction
 SolveSystem: System solved
 SolveSystem: Finished solving the system
 DefaultFinish: Finished solver: static current conduction
 RefineMesh: 
 RefineMesh: ----------- M E S H   R E F I N E M E N T --------------
-RefineMesh:  Error computation time (cpu-secs):                  1.4225190000000003
-RefineMesh:  Max error      =                                    8.8901710841675352E-004
-RefineMesh:  Error estimate =                                    1.4590790935127220E-004
+RefineMesh:  Error computation time (cpu-secs):                 0.64518100000000000
+RefineMesh:  Max error      =                                    8.0416314396130370E-004
+RefineMesh:  Error estimate =                                    2.1782263412476919E-004
 RefineMesh: Mesh convergence limit reached. Nothing to do!
-ReleaseMeshFaceTables: Releasing number of faces: 123303
+ReleaseMeshFaceTables: Releasing number of faces: 65814
 RefineMesh: ----------- E N D   M E S H   R E F I N E M E N T --------------
 Loading user function library: [StatCurrentSolveVec]...[StatCurrentSolver_post]
 StatCurrentSolver_post: ------------------------------------------------
@@ -1705,11 +1701,11 @@ ListInitElementKeyword: Initiated handle for: > Electric Conductivity < of type:
 ListInitElementKeyword: Treating keyword: Relative Permittivity
 ListInitElementKeyword: Initiated handle for: > Relative Permittivity < of type: 4
 StatCurrentSolver_post: Scaling the field values with weights
-StatCurrentSolver_post:  Total Heating Power   :   2340.5706086228793
-StatCurrentSolver_post:  Effective Resistance  :   4.2724624342282486E-004
+StatCurrentSolver_post:  Total Heating Power   :   2291.7614447550304
+StatCurrentSolver_post:  Effective Resistance  :   4.3634559010869974E-004
 StatCurrentSolver_post: All done
 ComputeNorm: Computing norm of solution
-ComputeChange: SS (ITER=3) (NRM,RELC): ( 0.58597514     0.36410948E-04 ) :: static current conduction
+ComputeChange: SS (ITER=3) (NRM,RELC): ( 0.59041476     0.47949059E-03 ) :: static current conduction
 SolveEquations: Overriding convergence due to Adaptive Meshing Finished!
 SolveEquations: Solvers after timestep
 SolverActivate: By some logic the mesh is switched here to child mesh!!!
@@ -1722,22 +1718,22 @@ ResultOutputSolver: -------------------------------------
 WARNING:: ResultOutputSolver: No output format given, assuming VTU
 ResultOutputSolver: Number of output meshes: 1
 ResultOutputSolver: Dimension of mesh is: 3
-ResultOutputSolver: Working on mesh 1: refinedmesh with 13438 nodes
+ResultOutputSolver: Working on mesh 1: refinedmesh with 7343 nodes
 ResultOutputSolver: Saving in unstructured VTK XML (.vtu) format
 VtuOutputSolver: Full filename base is: results/case
 VtuOutputSolver: Saving group 1
-GenerateSaveMask: Allocating NodePerm of size: 13438
-GenerateSaveMask: Allocating ActiveElem of size: 58541
+GenerateSaveMask: Allocating NodePerm of size: 7343
+GenerateSaveMask: Allocating ActiveElem of size: 30808
 GenerateSaveMask: Saving only bulk elements!
-GenerateSaveMask: Number of active elements 57885 out of 58541
-GenerateSaveMask: Number of geometry nodes 13438 out of 13438
+GenerateSaveMask: Number of active elements 30758 out of 30808
+GenerateSaveMask: Number of geometry nodes 7343 out of 7343
 VtuOutputSolver: Setting offset for boundary entities: 100
 VtuOutputSolver: Writing the vtu file: results/case_windings_t0003.vtu
 AscBinWriteInit: Initializing buffered ascii/binary writing
 AscBinWriteInit: Writing in binary
 AscBinWriteInit: Writing in double precision
 AscBinWriteInit: Writing to unit number: 58
-AscBinWriteInit: Size of buffer is: 13438
+AscBinWriteInit: Size of buffer is: 7343
 WriteVtuFile: Writing nodal fields
 WriteVtuFile: Saving variable: potential
 WriteVtuFile: Saving variable: joule heating
@@ -1761,7 +1757,7 @@ VtuOutputSolver: Finished writing vtu file
 VtuOutputSolver: Writing the pvd file: case_windings_t0003.vtu
 VtuOutputSolver: Finished writing pvd file
 VtuOutputSolver: Saving group 2
-GenerateSaveMask: Allocating NodePerm of size: 13438
+GenerateSaveMask: Allocating NodePerm of size: 7343
 GenerateSaveMask: Saving only bulk elements!
 GenerateSaveMask: No active elements forthis mask
 GenerateSavePermutation: Not saving all nodes, creating permutation!
@@ -1838,5 +1834,5 @@ FreeModel: Freeing body lists
 FreeModel: Freeing equations lists
 FreeModel: Freeing body forces lists
 MAIN: The end
-SOLVER TOTAL TIME(CPU,REAL):         8.33        9.06
-ELMER SOLVER FINISHED AT: 2024/10/10 13:08:54
+SOLVER TOTAL TIME(CPU,REAL):         3.51        4.69
+ELMER SOLVER FINISHED AT: 2024/10/10 13:19:31

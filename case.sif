@@ -61,8 +61,8 @@ Solver 1
   Adaptive Mesh Numbering = False
   Adaptive Output = Logical False
   Adaptive Save Mesh = Logical True
-  Adaptive Coarsening = False
-  Adaptive Min H = 0.000001
+  Adaptive Coarsening = Logical True
+  Adaptive Min H = 0.0001
   Adaptive Max H = 1
   Adaptive ReMesh Use Gmsh = Logical True
   Mesh Command = File "gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh"
