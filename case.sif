@@ -54,18 +54,18 @@ Solver 1
   Linear System Abort Not Converged = False
   Linear System Residual Output = 10
   Linear System Precondition Recompute = 1
+  
   Adaptive Mesh Refinement = True
-  Adaptive Remesh = True
-  Adaptive Error Limit = 0.001
-  Adaptive Mesh Name = RefinedMesh
-  Adaptive Mesh Numbering = False
-  Adaptive Output = Logical False
+  Adaptive Remesh = Logical True
   Adaptive Save Mesh = Logical True
-  Adaptive Coarsening = Logical True
-  Adaptive Min H = 0.00001
-  Adaptive Max H = 1
+  Adaptive Error Limit = 1e-3
+  Adaptive Mesh Numbering = Logical False
+  Adaptive Coarsening = Logical False
+  Adaptive Min H = 1e-6
+  Adaptive Max H = 10e-3
+  Adaptive ReMesh Use MMG = Logical False
   Adaptive ReMesh Use Gmsh = Logical True
-  Mesh Command = File "gmsh -3 case.geo -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh"
+  Mesh Command = File "gmsh -3 case.step -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh -save_all"
   Mesh Conversion Command = File "ElmerGrid 14 2 case.msh -autoclean"
 End
 
@@ -119,7 +119,7 @@ End
 
 ! pad_1
 Boundary Condition 1
-  Target Boundaries(1) = 1
+  Target Boundaries(1) = 53
   Name = "pad_1"
   Potential = 1
   pad_1_save_scalar = Logical True
@@ -127,7 +127,7 @@ End
 
 ! pad_2
 Boundary Condition 2
-  Target Boundaries(1) = 2
+  Target Boundaries(1) = 54
   Name = "pad_2"
   Potential = 0.0
 End
