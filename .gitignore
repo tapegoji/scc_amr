@@ -3,3 +3,4 @@ case/*
 *.sh
 case.geo
 case.step
+*.log
