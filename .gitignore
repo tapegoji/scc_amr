@@ -1,2 +1,5 @@
 results/*
 case/*
+*.sh
+case.geo
+case.step
