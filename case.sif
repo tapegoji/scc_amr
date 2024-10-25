@@ -65,6 +65,7 @@ Solver 1
   Adaptive Max H = 10e-3
   Adaptive ReMesh Use MMG = Logical False
   Adaptive ReMesh Use Gmsh = Logical True
+  Adaptive ReMesh Gmsh Use Pos Format = Logical True
   Mesh Command = File "gmsh -3 case.step -algo hxt -nt 6 -bgm gmsh_bgmesh.pos -o case.msh -save_all"
   Mesh Conversion Command = File "ElmerGrid 14 2 case.msh -autoclean"
 End
